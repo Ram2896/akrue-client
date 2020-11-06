@@ -1,1 +1,295 @@
 /* You can add global styles to this file, and also import other style files */
+
+$bg-color: white;
+
+$bg-color-black: #212529;
+
+body {
+  background-color: $bg-color;
+}
+a {
+  color: black !important;
+}
+
+// Nav bar
+.nav-item.active a {
+  color: blue !important;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.bg-black {
+  background-color: $bg-color-black;
+}
+.contact-btn,
+.mobile-contact-btn {
+  border-radius: 43px 43px;
+}
+
+// Nav bar
+
+.md-hide{
+  display: none;
+}
+
+.md-hide-rev{
+  display: block;
+}
+
+// Jumbo tron
+
+.text-col {
+  margin: auto;
+}
+
+.main-text-col {
+  margin: auto;
+}
+
+.jumbotron {
+  // padding: 1rem;
+  // margin-top: 50px;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/banners/bg1.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+    url(./assets/images/banners/bg1.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: top;
+  background-attachment: initial;
+  margin-bottom: 0;
+}
+
+.serv-jumbotron{
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0.7))
+  ),
+  url(./assets/images/banners/servicebg.jpg);
+background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+  url(./assets/images/banners/servicebg.jpg);
+  
+}
+
+.podcast-jumbotron{
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0.7))
+  ),
+  url(./assets/images/banners/podcastbg.jpg);
+background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+  url(./assets/images/banners/podcastbg.jpg);
+}
+
+
+.aboutus-jumbotron{
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.7)),
+    to(rgba(0, 0, 0, 0.7))
+  ),
+  url(./assets/images/banners/aboutbg.jpg);
+background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+  url(./assets/images/banners/aboutbg.jpg);
+}
+.footer-jumbotron {
+  margin-top: 0;
+  height: 80vh;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/banners/footerbg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./assets/images/banners/footerbg.jpg);
+}
+
+.main-menu {
+  margin: 0 auto;
+}
+.display-4 {
+  font-weight: 700;
+}
+
+.mobile .mob-a-block {
+  font-weight: 500;
+}
+
+// Mobile
+.mobile {
+  .mob-a-block {
+    display: block;
+    font-weight: 500;
+  }
+}
+
+.mob-a-block {
+  display: none;
+}
+
+.mobile .desc-a-block {
+  display: none;
+}
+
+.desc-a-block {
+  display: block;
+}
+
+// Description
+.description {
+  background-color: #f7f6f4;
+}
+
+.fw-450 {
+  font-weight: 450 !important;
+}
+.fw-500 {
+  font-weight: 500 !important;
+}
+
+.fs-s {
+  font-size: small;
+}
+.fs-l {
+  font-size: larger !important;
+}
+
+.fs-xl {
+  font-size: x-large !important;
+}
+
+.fs-xxl {
+  font-size: xx-large !important;
+}
+
+// home
+.desc-home-txtimg {
+  display: none;
+}
+
+.mob-home-txtimg {
+  display: block;
+}
+
+.mobile {
+  // .description{
+  //   margin: 0 20px;
+  // }
+}
+
+// footer
+
+// Responsive
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .text-col {
+    width: 100% !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .text-col {
+    width: 100% !important;
+  }
+  .fw-450 {
+    font-weight: 400 !important;
+  }
+  .fw-500 {
+    font-weight: 450 !important;
+  }
+
+  .fs-l {
+    font-size: large !important;
+  }
+
+  .fs-xl {
+    font-size: larger !important;
+  }
+
+  .fs-xxl {
+    font-size: x-large !important;
+  }
+  .desc-home-txtimg {
+    display: block;
+  }
+  .mob-home-txtimg ,.md-hide-rev{
+    display: none;
+  }
+  .md-hide{
+    display: block;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .text-col {
+    width: 90% !important;
+  }
+  .fw-450 {
+    font-weight: 450 !important;
+  }
+  .fw-500 {
+    font-weight: 500 !important;
+  }
+
+  .fs-l {
+    font-size: larger !important;
+  }
+
+  .fs-xl {
+    font-size: x-large !important;
+  }
+
+  .fs-xxl {
+    font-size: xx-large !important;
+  }
+
+  .footer-left {
+    padding: 0 70px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .text-col {
+    width: 72% !important;
+  }
+  .fw-450 {
+    font-weight: 450 !important;
+  }
+  .fw-500 {
+    font-weight: 500 !important;
+  }
+
+  .fs-l {
+    font-size: larger !important;
+  }
+
+  .fs-xl {
+    font-size: x-large !important;
+  }
+
+  .fs-xxl {
+    font-size: xx-large !important;
+  }
+}

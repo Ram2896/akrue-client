@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DeviceDetectorSer } from 'src/app/service/device-detector.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Arkue-Client';
+  constructor(public _deviceDetectorService :DeviceDetectorSer ) {
+  }
 }
