@@ -4,12 +4,31 @@ $bg-color: white;
 
 $bg-color-black: #212529;
 
+$cj-text-color: #c0c0c0;
+
+$cj-bg-color: #f8f8f9;
+
+$font-family: Montserrat;
 body {
   background-color: $bg-color;
+  font-family: $font-family;
 }
 a {
   color: black !important;
 }
+
+.fa {
+  //   background: black;
+  //   color: white!important;
+  //   padding: 7px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  //   border-radius: 50%;
+  }
+
 
 // Nav bar
 .nav-item.active a {
@@ -19,6 +38,10 @@ a {
   font-weight: 700;
   font-size: 2rem;
 }
+
+.navbar>.container{
+  align-items: flex-end;
+}
 .bg-black {
   background-color: $bg-color-black;
 }
@@ -27,13 +50,20 @@ a {
   border-radius: 43px 43px;
 }
 
+.nav-type {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
 // Nav bar
 
-.md-hide{
+.md-hide {
   display: none;
 }
 
-.md-hide-rev{
+.md-hide-rev {
   display: block;
 }
 
@@ -47,9 +77,26 @@ a {
   margin: auto;
 }
 
+.wait-list {
+  margin-top: 80px;
+}
 .jumbotron {
   // padding: 1rem;
   // margin-top: 50px;
+
+  // height: 85vh !important;
+  margin-top: 80px;
+  background-size: cover;
+  background-position: top;
+  background-attachment: initial;
+  margin-bottom: 0;
+}
+
+// .serv-jumbotron,.podcast-jumbotron ,.aboutus-jumbotron, .contactus-jumbotron{
+//   height: 50vh !important;
+// }
+
+.home-jumbotron {
   background-image: -webkit-gradient(
       linear,
       left top,
@@ -57,17 +104,70 @@ a {
       from(rgba(0, 0, 0, 0.7)),
       to(rgba(0, 0, 0, 0.7))
     ),
-    url(./assets/images/banners/bg1.jpg);
+    url(./assets/images/Homepage/Banner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
-    url(./assets/images/banners/bg1.jpg);
-  height: 85vh!important;
+    url(./assets/images/Homepage/Banner.jpg);
+}
+.serv-jumbotron {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/Service/servbanner.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+    url(./assets/images/Service/servbanner.jpg);
+}
+
+.podcast-jumbotron {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/Podcast/podbanner.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+    url(./assets/images/Podcast/podbanner.jpg);
+}
+
+.aboutus-jumbotron {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/About_us/auBanner.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+    url(./assets/images/About_us/auBanner.jpg);
+}
+
+.contactus-jumbotron {
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(./assets/images/Contact_us/cubanner.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
+    url(./assets/images/Contact_us/cubanner.jpg);
+  background-position: center;
+}
+
+.login-image{
+  margin-top: 0px;
   background-size: cover;
   background-position: top;
   background-attachment: initial;
   margin-bottom: 0;
-}
-
-.serv-jumbotron{
+  height: 70vh;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -75,38 +175,12 @@ a {
     from(rgba(0, 0, 0, 0.7)),
     to(rgba(0, 0, 0, 0.7))
   ),
-  url(./assets/images/banners/servicebg.jpg);
-background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
-  url(./assets/images/banners/servicebg.jpg);
-  
+  url(./assets/images/Login/logbg.jpg);
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url(./assets/images/Login//logbg.jpg);
 }
 
-.podcast-jumbotron{
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.7)),
-    to(rgba(0, 0, 0, 0.7))
-  ),
-  url(./assets/images/banners/podcastbg.jpg);
-background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
-  url(./assets/images/banners/podcastbg.jpg);
-}
-
-
-.aboutus-jumbotron{
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.7)),
-    to(rgba(0, 0, 0, 0.7))
-  ),
-  url(./assets/images/banners/aboutbg.jpg);
-background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
-  url(./assets/images/banners/aboutbg.jpg);
-}
+// Footer
 .footer-jumbotron {
   margin-top: 0;
   height: 80vh;
@@ -117,9 +191,9 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
       from(rgba(0, 0, 0, 0.7)),
       to(rgba(0, 0, 0, 0.7))
     ),
-    url(./assets/images/banners/footerbg.jpg);
+    url(./assets/images/Homepage/Homepage_Footer.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(./assets/images/banners/footerbg.jpg);
+    url(./assets/images/Homepage/Homepage_Footer.jpg);
 }
 
 .main-menu {
@@ -165,6 +239,9 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
   font-weight: 500 !important;
 }
 
+.fw-600 {
+  font-weight: 500 !important;
+}
 .fs-s {
   font-size: small;
 }
@@ -201,13 +278,63 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .serv-jumbotron,
+  .podcast-jumbotron,
+  .aboutus-jumbotron,
+  .contactus-jumbotron,
+  .wait-list {
+    // height: 60vh !important;
+    margin-top: 80px;
+  }
+
+  .home-jumbotron,
+  .wait-list {
+    // height: 70vh !important;
+    margin-top: 80px;
+  }
+
   .text-col {
     width: 100% !important;
+  }
+
+  // .nav-type{
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   z-index: 1030;
+  // }
+
+  .nav-type {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .serv-jumbotron,
+  .podcast-jumbotron,
+  .aboutus-jumbotron,
+  .contactus-jumbotron {
+    height: 50vh !important;
+  }
+
+  .home-jumbotron {
+    height: 60vh !important;
+  }
+
+  .serv-jumbotron,
+  .podcast-jumbotron,
+  .aboutus-jumbotron,
+  .contactus-jumbotron,
+  .wait-list,
+  .home-jumbotron {
+    margin-top: 0px;
+  }
   .text-col {
     width: 100% !important;
   }
@@ -232,16 +359,34 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
   .desc-home-txtimg {
     display: block;
   }
-  .mob-home-txtimg ,.md-hide-rev{
+  .mob-home-txtimg,
+  .md-hide-rev {
     display: none;
   }
-  .md-hide{
+  .md-hide {
     display: block;
+  }
+  .nav-type {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  .serv-jumbotron,
+  .podcast-jumbotron,
+  .aboutus-jumbotron,
+  .contactus-jumbotron {
+    height: 60vh !important;
+    margin-top: 0px;
+  }
+
+  .home-jumbotron {
+    height: 80vh !important;
+    margin-top: 0px;
+  }
   .text-col {
     width: 90% !important;
   }
@@ -264,13 +409,30 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
     font-size: xx-large !important;
   }
 
-  .footer-left {
-    padding: 0 70px;
+  .nav-type {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
   }
+  // .footer-left {
+  //   padding: 0 70px;
+  // }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .serv-jumbotron,
+  .podcast-jumbotron,
+  .aboutus-jumbotron,
+  .contactus-jumbotron {
+    height: 50vh !important;
+    margin-top: 0px;
+  }
+
+  .home-jumbotron {
+    height: 80vh !important;
+    margin-top: 0px;
+  }
   .text-col {
     width: 72% !important;
   }
@@ -292,4 +454,47 @@ background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.7)),
   .fs-xxl {
     font-size: xx-large !important;
   }
+  .nav-type {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+}
+
+// Container width only
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .con-width {
+    max-width: 720px;
+  }
+}
+
+//  Contact us
+
+.cj-text-color {
+  color: $cj-text-color;
+}
+
+.cj-bg-color {
+  background-color: $cj-bg-color;
+}
+
+.form-control {
+  border: 1px solid $cj-bg-color;
 }

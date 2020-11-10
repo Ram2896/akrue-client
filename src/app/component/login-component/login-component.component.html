@@ -1,0 +1,49 @@
+<div>
+  <div class="container-fluid">
+    <h2 class="text-center">Login Form</h2>
+    <div class="row">
+      <div class="col-lg-8">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-12 pr-0">
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control cj-bg-color cj-text-color rounded-0"
+                  name="email"
+                  placeholder="Email"
+                  formControlName="email"
+                  [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 pr-0">
+              <div class="form-group mb-4">
+                <input
+                  type="password"
+                  class="form-control cj-bg-color cj-text-color rounded-0"
+                  name="password"
+                  aria-describedby="emailHelp"
+                  placeholder="Password"
+                  formControlName="password"
+                  [ngClass]="{ 'is-invalid': submitted && l.password.errors }"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg contact-btn w-50">
+            Submit
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-4">
+        <div class="login-image jumbotron"></div>
+        <!-- <img src="./assets/images/Login/logbg.jpg"
+          class="img-thumbnail p-0 login-image"/> -->
+      </div>
+    </div>
+  </div>
+</div>

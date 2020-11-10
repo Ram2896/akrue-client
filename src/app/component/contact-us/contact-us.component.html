@@ -1,0 +1,107 @@
+<div class="contactus mb-4">
+  <div
+    class="jumbotron jumbotron-fluid text-white bg-sticky contactus-jumbotron"
+  >
+    <div class="container con-width">
+      <h1 class="display-4">Contact Us</h1>
+      <p class="lead">Reach out with any questions or inquiries</p>
+    </div>
+  </div>
+  <div class="container-fluid description text-center">
+    <div class="row">
+      <div class="col mx-3">
+        <p class="my-0 fw-450 fs-xl">
+          80% OF STUDENT ATHLETES LIVE BELOW THE POVERTY LINE
+        </p>
+        <p class="font-weight-bold fs-xl">WE ARE GOING TO CHANGE THAT</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-md-3">
+        <p class="fs-xl mb-0 font-weight-bold">Connect</p>
+        <p class="fs-l mb-0 fw-450">
+          Find out more about AKRUE and what we are working on.
+        </p>
+        <p class="fs-l mb-0 fw-450">
+          Then follow us on:<span>
+            <a href="#" class="fa fa-youtube-play"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a
+          ></span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 offset-md-3">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-6 pr-0">
+              <div class="form-group mb-2">
+                <input
+                  type="text"
+                  class="form-control cj-bg-color cj-text-color rounded-0"
+                  name="Fullname"
+                  placeholder="Name"
+                  formControlName="Fullname"
+                  [ngClass]="{ 'is-invalid': submitted && c.Fullname.errors }"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 pr-0">
+              <div class="form-group mb-2">
+                <input
+                  type="email"
+                  class="form-control cj-bg-color cj-text-color rounded-0"
+                  name="Email"
+                  aria-describedby="emailHelp"
+                  placeholder="Email"
+                  formControlName="Email"
+                  [ngClass]="{ 'is-invalid': submitted && c.Email.errors }"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 pr-0">
+              <div class="form-group">
+                <textarea
+                  class="form-control cj-bg-color cj-text-color rounded-0"
+                  formControlName="Comment"
+                  name="Comment"
+                  placeholder="Message"
+                  style="height: 150px;"
+                  [ngClass]="{ 'is-invalid': submitted && c.Comment.errors }"
+                >
+                </textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg contact-btn w-50">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid description text-center">
+  <div class="row">
+    <div class="col mx-3 my-4">
+      <p class="my-0 font-normal">
+        Be one of the first student athletes to monitize your personal brand.
+        Sign up
+      </p>
+      <p class="font-normal">for our waitlist to join Akrue</p>
+      <a
+        class="btn btn-primary btn-lg active contact-btn text-white"
+        routerLink="/wait-list"
+      >
+        JOIN THE WAITLIST
+      </a>
+    </div>
+  </div>
+</div>

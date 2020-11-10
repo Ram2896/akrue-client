@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';  
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +12,10 @@ import { HeaderComponent } from './component/header/header.component';
 import { ServiceComponent } from './component/service/service.component';
 import { PodcastComponent } from './component/podcast/podcast.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
+import { ContactUsComponent } from './component/contact-us/contact-us.component';
+import { WaitListComponent } from './component/wait-list/wait-list.component';
+import { LoginComponentComponent } from './component/login-component/login-component.component';
+import { WaitlistListComponent } from './component/waitlist-list/waitlist-list.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +25,17 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
     HeaderComponent,
     ServiceComponent,
     PodcastComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactUsComponent,
+    WaitListComponent,
+    LoginComponentComponent,
+    WaitlistListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

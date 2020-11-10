@@ -1,41 +1,62 @@
-<div class="container md-hide">
-  <div class="row">
-    <div class="col text-right">
-      <p class="mb-0">Login/Sign up</p>
+<div class="container con-width md-hide">
+  <div class="row header" >
+    <div class="col text-left">
+      <a href="#" class="fa fa-youtube-play"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-linkedin"></a>
     </div>
   </div>
 </div>
 <div class="text-black">
-  <nav class="navbar navbar-expand-md navbar-light bg-white static-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">AKRUE</a>
-      <button
-        class="btn btn-primary ml-auto my-2 my-sm-0 mobile-contact-btn md-hide-rev"
-        type="submit"
+  <nav
+    class="navbar navbar-expand-md navbar-light bg-white nav-type static-top"
+  >
+    <div class="container con-width">
+      <a class="navbar-brand py-0" href="#">
+        <img
+          src="./assets/images/Logo/Akrue_logo.jpg"
+          width="120"
+          height="30"
+          alt=""
+        />
+      </a>
+      <a
+        class="btn btn-primary ml-auto my-2 my-sm-0  mobile-contact-btn md-hide-rev text-white"
+        routerLink="/contact-us"
       >
         CONTACT US
-      </button>
+      </a>
       <button
-        class="navbar-toggler"
-        type="button"
+        class="navbar-toggler border-0"
         data-toggle="collapse"
         data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="">
+          <img
+          src="./assets/images/icons/menu.png"
+          width="40"
+          height="40"
+          alt=""
+        />
+        </span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li
-            class="nav-item"
+            class="nav-item ml-3"
             [ngClass]="{'active': selectedItem == item}"
             (click)="listClick($event, item)"
             *ngFor="let item of menuItems"
           >
-            <a class="nav-link" routerLink="/{{item}}"> {{ item}} </a>
+            <a class="nav-link font-weight-normal" routerLink="/{{item}}">
+              {{ item}}
+            </a>
           </li>
           <!-- <li class="nav-item active">
             <a class="nav-link" href="#"
@@ -52,14 +73,12 @@
             <a class="nav-link" href="#">ABOUT US</a>
           </li> -->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <button
-            class="btn btn-primary my-2 my-sm-0 contact-btn md-hide"
-            type="submit"
-          >
-            CONTACT US
-          </button>
-        </form>
+        <a
+          class="btn btn-primary my-2 my-sm-0 contact-btn md-hide ml-4 text-white"
+          routerLink="/contact-us"
+        >
+          CONTACT US
+        </a>
       </div>
     </div>
   </nav>
