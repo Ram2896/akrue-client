@@ -25,6 +25,16 @@ export class HelperService {
     };
   }
 
+  addComponentname(name : string) {
+    localStorage.setItem("name",name);
+  }
+
+  getComponentname() {
+    let componentName=localStorage.getItem("name");
+    if(componentName === "login"){
+      return true;
+    }
+  }
   //   addComponentClass(name: string) {
 
   //     this.componentName = "name";

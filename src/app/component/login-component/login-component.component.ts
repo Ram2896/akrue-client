@@ -11,7 +11,10 @@ export class LoginComponentComponent implements OnInit {
 
   loginForm: FormGroup;
   submitted = false;
-  constructor(private _formBuilder: FormBuilder, private _router: Router,private _helper:HelperService) {}
+  constructor(private _formBuilder: FormBuilder,
+     private _router: Router,
+     private _helper:HelperService
+     ) {}
 
   ngOnInit(): void {
     this.loginPage = "login";
@@ -21,7 +24,7 @@ export class LoginComponentComponent implements OnInit {
       ]),
       password: new FormControl("", [Validators.required]),
     });
-  //  this._helper.componentName = "login"; 
+  this._helper.addComponentname("login"); 
   }
 
   

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from 'src/app/service/helper.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _helper:HelperService
+  ) { }
 
   ngOnInit(): void {
+  this._helper.addComponentname("aboutus"); 
+
   }
 
 }

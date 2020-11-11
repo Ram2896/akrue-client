@@ -1,45 +1,47 @@
 <div>
   <div class="container-fluid">
-    <h2 class="text-center">Login Form</h2>
     <div class="row">
-      <div class="col-lg-8">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="col-md-8">
+        <div class="container">
           <div class="row">
-            <div class="col-md-12 pr-0">
-              <div class="form-group mb-4">
-                <input
-                  type="text"
-                  class="form-control cj-bg-color cj-text-color rounded-0"
-                  name="email"
-                  placeholder="Email"
-                  formControlName="email"
-                  [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
-                />
-              </div>
-            </div>
+              <img src="./assets/images/Logo/Akrue_logo.jpg" class="p-0 login-logo" />
           </div>
-          <div class="row">
-            <div class="col-md-12 pr-0">
-              <div class="form-group mb-4">
-                <input
-                  type="password"
-                  class="form-control cj-bg-color cj-text-color rounded-0"
-                  name="password"
-                  aria-describedby="emailHelp"
-                  placeholder="Password"
-                  formControlName="password"
-                  [ngClass]="{ 'is-invalid': submitted && l.password.errors }"
-                />
-              </div>
+        </div>
+        <div class="container">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control cj-bg-color cj-text-color rounded-0"
+                name="email"
+                placeholder="Email"
+                formControlName="email"
+                [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
+              />
             </div>
-          </div>
 
-          <button type="submit" class="btn btn-primary btn-lg contact-btn w-50">
-            Submit
-          </button>
-        </form>
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control cj-bg-color cj-text-color rounded-0"
+                name="password"
+                aria-describedby="emailHelp"
+                placeholder="Password"
+                formControlName="password"
+                [ngClass]="{ 'is-invalid': submitted && l.password.errors }"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg contact-btn w-50"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-md-4 p-0 md-hide">
         <div class="login-image jumbotron"></div>
         <!-- <img src="./assets/images/Login/logbg.jpg"
           class="img-thumbnail p-0 login-image"/> -->

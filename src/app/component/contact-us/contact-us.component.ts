@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from "@angular/forms";
+import { HelperService } from 'src/app/service/helper.service';
 
 @Component({
   selector: "app-contact-us",
@@ -14,7 +15,10 @@ import {
 export class ContactUsComponent implements OnInit {
   contactForm: FormGroup;
   submitted = false;
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder,
+    private _helper:HelperService
+
+    ) {}
 
   ngOnInit(): void {
     this.contactForm = this._formBuilder.group({
@@ -24,6 +28,8 @@ export class ContactUsComponent implements OnInit {
       ]),
       Comment: new FormControl("", [Validators.required]),
     });
+  this._helper.addComponentname("contactus"); 
+
   }
 
   get c() {

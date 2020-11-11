@@ -10,7 +10,8 @@ import { HelperService } from 'src/app/service/helper.service';
 export class WaitListComponent implements OnInit {
   waitListForm: FormGroup;
   submitted = false;
-  constructor(private _formBuilder: FormBuilder , private _helper:HelperService) {}
+  constructor(private _formBuilder: FormBuilder , 
+    private _helper:HelperService) {}
 
   ngOnInit(): void {
     this.waitListForm = this._formBuilder.group(
@@ -30,6 +31,8 @@ export class WaitListComponent implements OnInit {
         validator: this._helper.MustMatch('email', 'confirmEmail')
       }
     );
+  this._helper.addComponentname("waitlist"); 
+
   }
   get f() {
     return this.waitListForm.controls;

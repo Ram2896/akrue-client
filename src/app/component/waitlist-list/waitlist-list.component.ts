@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { HelperService } from 'src/app/service/helper.service';
 
 @Component({
   selector: "app-waitlist-list",
@@ -6,7 +7,10 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./waitlist-list.component.scss"],
 })
 export class WaitlistListComponent implements OnInit {
-  constructor() {}
+  constructor(
+    private _helper:HelperService
+
+  ) {}
 
   wList: any;
 
@@ -35,5 +39,7 @@ export class WaitlistListComponent implements OnInit {
         email: "harish96@gmail.com",
       },
     ];
+  this._helper.addComponentname("userist"); 
+
   }
 }

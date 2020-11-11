@@ -8,13 +8,24 @@ $cj-text-color: #c0c0c0;
 
 $cj-bg-color: #f8f8f9;
 
+$button-color: #0166FF;
+
 $font-family: Montserrat;
 body {
   background-color: $bg-color;
-  font-family: $font-family;
+  font-family: $font-family!important;
 }
 a {
   color: black !important;
+}
+
+.btn-color{
+  background: $button-color;
+}
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 black;
 }
 
 .fa {
@@ -33,6 +44,11 @@ a {
 // Nav bar
 .nav-item.active a {
   color: blue !important;
+  text-decoration: none;
+}
+a:hover {
+  color: #0056b3;
+  text-decoration: none; 
 }
 .navbar-brand {
   font-weight: 700;
@@ -168,6 +184,7 @@ a {
   background-attachment: initial;
   margin-bottom: 0;
   height: 70vh;
+  border-radius: 0;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -183,7 +200,7 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 // Footer
 .footer-jumbotron {
   margin-top: 0;
-  height: 80vh;
+  // height: 80vh;
   background-image: -webkit-gradient(
       linear,
       left top,
@@ -297,6 +314,11 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     width: 100% !important;
   }
 
+  .img-thumbnail{
+    border: 0;
+    border-radius: 0;
+  }
+
   // .nav-type{
   //   position: fixed;
   //   top: 0;
@@ -320,11 +342,11 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron {
-    height: 50vh !important;
+    // height: 50vh !important;
   }
 
   .home-jumbotron {
-    height: 60vh !important;
+    // height: 60vh !important;
   }
 
   .serv-jumbotron,
@@ -379,12 +401,12 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron {
-    height: 60vh !important;
+    // height: 60vh !important;
     margin-top: 0px;
   }
 
   .home-jumbotron {
-    height: 80vh !important;
+    // height: 80vh !important;
     margin-top: 0px;
   }
   .text-col {
@@ -425,12 +447,12 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron {
-    height: 50vh !important;
+    // height: 50vh !important;
     margin-top: 0px;
   }
 
   .home-jumbotron {
-    height: 80vh !important;
+    // height: 80vh !important;
     margin-top: 0px;
   }
   .text-col {
@@ -480,9 +502,9 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .con-width {
-    max-width: 720px;
-  }
+  // .con-width {
+  //   max-width: 720px;
+  // }
 }
 
 //  Contact us
@@ -497,4 +519,12 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 
 .form-control {
   border: 1px solid $cj-bg-color;
+}
+
+.form-control:focus {
+    color: #495057;
+    // background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 BLACK; 
 }
