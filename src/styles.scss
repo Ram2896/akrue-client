@@ -343,10 +343,11 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
   .aboutus-jumbotron,
   .contactus-jumbotron {
     // height: 50vh !important;
-    // padding-top: 8%;
+    padding-top: 7%;
   }
 
   .home-jumbotron {
+    padding-top: 9%;
     // height: 60vh !important;
   }
 
@@ -357,8 +358,11 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
   .wait-list,
   .home-jumbotron {
     margin-top: 0px;
-    padding-top: 9%;
 
+  }
+  .podcast-jumbotron{
+
+  padding-top: 5%!important;
   }
   .text-col {
     width: 100% !important;
