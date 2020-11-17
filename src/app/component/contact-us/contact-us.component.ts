@@ -6,6 +6,7 @@ import {
   Validators,
 } from "@angular/forms";
 import { HelperService } from 'src/app/service/helper.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: "app-contact-us",
@@ -21,6 +22,7 @@ export class ContactUsComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+    AOS.init();
     this.contactForm = this._formBuilder.group({
       Fullname: new FormControl("", [Validators.required]),
       Email: new FormControl("", [

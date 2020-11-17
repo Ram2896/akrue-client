@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import * as AOS from 'aos';
 import { DeviceDetectorSer } from 'src/app/service/device-detector.service';
 
 @Component({
@@ -9,5 +10,8 @@ import { DeviceDetectorSer } from 'src/app/service/device-detector.service';
 export class AppComponent {
   title = 'Arkue-Client';
   constructor(public _deviceDetectorService :DeviceDetectorSer ) {
+  }
+  ngOnInit(){
+    // AOS.init();
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceDetectorSer } from 'src/app/service/device-detector.service';
 import { HelperService } from 'src/app/service/helper.service';
-
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    AOS.init();
     console.log(this._deviceDetectorService.isMobile)
   this._helper.addComponentname("home"); 
 
