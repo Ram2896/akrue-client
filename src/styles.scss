@@ -301,11 +301,12 @@ a:hover {
 
 .login-image {
   margin-top: 0px;
-  background-size: cover;
+  background-size: contain;
   background-position: top;
   background-attachment: initial;
+  background-repeat: no-repeat;
   margin-bottom: 0;
-  height: 70vh;
+  height: 500px;
   border-radius: 0;
   background-image: -webkit-gradient(
       linear,
@@ -379,7 +380,7 @@ a:hover {
 }
 
 .fw-600 {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 .fs-s {
   font-size: small;

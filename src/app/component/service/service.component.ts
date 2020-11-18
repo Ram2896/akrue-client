@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HelperService } from 'src/app/service/helper.service';
-
+import * as AOS from 'aos';
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
@@ -16,5 +16,6 @@ export class ServiceComponent implements OnInit {
 
   ngOnInit(): void {
   this._helper.addComponentname("service"); 
+  AOS.init();
   }
 }

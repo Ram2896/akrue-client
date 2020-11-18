@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { HelperService } from 'src/app/service/helper.service';
+import { Component, OnInit } from "@angular/core";
+import { HelperService } from "src/app/service/helper.service";
+import * as AOS from "aos";
 
 @Component({
-  selector: 'app-about-us',
-  templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss']
+  selector: "app-about-us",
+  templateUrl: "./about-us.component.html",
+  styleUrls: ["./about-us.component.scss"],
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor(
-    private _helper:HelperService
-  ) { }
+  constructor(private _helper: HelperService) {}
 
   ngOnInit(): void {
-  this._helper.addComponentname("aboutus"); 
-
+    this._helper.addComponentname("aboutus");
+    AOS.init();
   }
-
 }
