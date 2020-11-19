@@ -5,11 +5,35 @@
 
 
 .fit-img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
+  // width:100%;
+  // height:350px;
+  // object-fit:cover;
 }
-
+.body-text-normal{
+  font-size: 18px;
+}
+@media (min-width: 576) {
+  .fit-img{
+    // width:80%;
+    // height:350px;
+    // object-fit:cover;
+  }
+}
+@media (min-width: 992px) {
+  .body-text-normal{
+    font-size: 25px;
+  }
+  .fit-img{
+    // width:100%;
+    // height:400px;
+    // object-fit:cover;
+  }
+}
+@media (min-width: 1200px) {
+  .body-text-normal{
+    font-size: 28px;
+  }
+}
 .main-text-col{
   margin: 0;
 }

@@ -2,11 +2,11 @@
   <div class="container con-width md-hide">
     <div class="row header">
       <div class="col text-left">
-        <a href="#" class="fa fa-youtube-play"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-facebook fb-color"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-linkedin"></a>
+        <a href=""  target="_blank" class="fa fa-youtube-play"></a>
+        <a href="https://twitter.com/akruemedia?s=11"  target="_blank" class="fa fa-twitter"></a>
+        <a href="#"  target="_blank" class="fa fa-facebook"></a>
+        <a href="https://instagram.com/akruemedia?igshid=1tlxxw0j2okbd"  target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/company/akrue-media"  target="_blank" class="fa fa-linkedin"></a>
       </div>
     </div>
   </div>
@@ -14,12 +14,11 @@
     <nav
       class="navbar navbar-expand-md navbar-light bg-white nav-type static-top"
     >
-      <div class="container con-width">
-        <a class="navbar-brand py-0" href="#">
+      <div class="container con-width align-items-center">
+        <a class="navbar-brand py-0 m-0 " href="#">
           <img
-            src="./assets/images/Logo/Akrue_logo.jpg"
-            width="120"
-            height="30"
+            src="./assets/images/Compressed/Akrue_logo.jpg"
+           class="akrue-logo"
             alt=""
           />
         </a>
@@ -39,7 +38,7 @@
         >
           <span class="">
             <img
-              src="./assets/images/icons/menu.png"
+              src="./assets/images/Compressed/menu.png"
               width="40"
               height="40"
               alt=""
@@ -50,12 +49,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li
-              class="nav-item ml-3"
+              class="nav-item mar-left"
               [ngClass]="{'active': selectedItem == item}"
               (click)="listClick($event, item)"
               *ngFor="let item of menuItems"
             >
-              <a class="nav-link font-weight-normal" routerLink="/{{item}}">
+              <a class="nav-link font-weight-bold" routerLink="/{{item}}">
                 {{ item}}
               </a>
             </li>
@@ -75,7 +74,7 @@
           </li> -->
           </ul>
           <a
-            class="btn btn-color my-2 my-sm-0 contact-btn md-hide ml-4 text-white"
+            class="btn btn-color my-2 my-sm-0 contact-btn md-hide text-white mar-left"
             routerLink="/contact-us"
           >
             CONTACT US

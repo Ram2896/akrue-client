@@ -11,6 +11,10 @@ $cj-bg-color: #f8f8f9;
 $button-color: #0166ff;
 
 $font-family: Montserrat;
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $bg-color;
   font-family: $font-family !important;
@@ -242,9 +246,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Homepage/Banner.jpg);
+    url(./assets/images/Compressed/Banner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Homepage/Banner.jpg);
+    url(./assets/images/Compressed/Banner.jpg);
 }
 .serv-jumbotron {
   background-image: -webkit-gradient(
@@ -254,9 +258,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Service/servbanner.jpg);
+    url(./assets/images/Compressed/servbanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Service/servbanner.jpg);
+    url(./assets/images/Compressed/servbanner.jpg);
 }
 
 .podcast-jumbotron {
@@ -267,9 +271,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Podcast/podbanner.jpg);
+    url(./assets/images/Compressed/podbanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Podcast/podbanner.jpg);
+    url(./assets/images/Compressed/podbanner.jpg);
 }
 
 .aboutus-jumbotron {
@@ -280,9 +284,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/About_us/auBanner.jpg);
+    url(./assets/images/Compressed/auBanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
-    url(./assets/images/About_us/auBanner.jpg);
+    url(./assets/images/Compressed/auBanner.jpg);
 }
 
 .contactus-jumbotron {
@@ -293,9 +297,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Contact_us/cubanner.jpg);
+    url(./assets/images/Compressed/cubanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Contact_us/cubanner.jpg);
+    url(./assets/images/Compressed/cubanner.jpg);
   background-position: center;
 }
 
@@ -315,9 +319,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Login/logbg.jpg);
+    url(./assets/images/Compressed/logbg.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Login//logbg.jpg);
+    url(./assets/images/Compressed/logbg.jpg);
 }
 
 // Footer
@@ -331,9 +335,9 @@ a:hover {
       from(rgba(0, 0, 0, 0.8)),
       to(rgba(0, 0, 0, 0.8))
     ),
-    url(./assets/images/Homepage/Homepage_Footer.jpg);
+    url(./assets/images/Compressed/Homepage_Footer.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(./assets/images/Homepage/Homepage_Footer.jpg);
+    url(./assets/images/Compressed/Homepage_Footer.jpg);
 }
 
 .main-menu {
@@ -474,6 +478,10 @@ a:hover {
     // height: 60vh !important;
   }
 
+  .mar-left {
+    margin-left: 7px !important;
+  }
+
   .serv-jumbotron,
   .podcast-jumbotron,
   .aboutus-jumbotron,
@@ -486,7 +494,7 @@ a:hover {
     padding-top: 5% !important;
   }
   .text-col {
-    width: 100% !important;
+    width: 90% !important;
   }
   .fw-450 {
     font-weight: 400 !important;
@@ -537,8 +545,12 @@ a:hover {
     height: 80vh !important;
     margin-top: 0px;
   }
+
+  .mar-left {
+    margin-left: 30px !important;
+  }
   .text-col {
-    width: 90% !important;
+    width: 75% !important;
   }
   .fw-450 {
     font-weight: 450 !important;
@@ -569,8 +581,6 @@ a:hover {
   // }
 }
 
-
-
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .serv-jumbotron,
@@ -580,13 +590,16 @@ a:hover {
     height: 60vh !important;
     margin-top: 0px;
   }
-  
+
   .home-jumbotron {
-    height: 80vh !important;
+    height: 100vh !important;
     margin-top: 0px;
   }
+  .mar-left {
+    margin-left: 50px !important;
+  }
   .text-col {
-    width: 72% !important;
+    width: 75% !important;
   }
   .fw-450 {
     font-weight: 450 !important;
@@ -594,15 +607,15 @@ a:hover {
   .fw-500 {
     font-weight: 500 !important;
   }
-  
+
   .fs-l {
     font-size: larger !important;
   }
-  
+
   .fs-xl {
     font-size: x-large !important;
   }
-  
+
   .fs-xxl {
     font-size: xx-large !important;
   }
@@ -616,7 +629,7 @@ a:hover {
 // above 1500 px
 @media (min-width: 1500px) {
   .text-col {
-    width: 50% !important;
+    width: 75% !important;
   }
 }
 // Container width only
@@ -625,22 +638,73 @@ a:hover {
 // No media query since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
+.heading {
+  font-weight: 700;
+  font-size: 40px;
+}
+.small-text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.top-desc-normal{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.top-desc-bold{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.body-text-bold{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.body-text-normal{
+  font-size: 18px;
+  font-weight: 500;
+}
 @media (min-width: 576px) {
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  .heading {
+    font-weight: 700;
+    font-size: 68px;
+  }
+  .small-text {
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  // .con-width {
-  //   max-width: 720px;
-  // }
+  
+  .body-text-bold{
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .body-text-normal{
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 2000px) {
+
+
 }
 
 //  Contact us
@@ -663,6 +727,6 @@ a:hover {
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 BLACK;
-    box-shadow: 0 0 BLACK; 
+  box-shadow: 0 0 BLACK;
   box-shadow: 0 0 BLACK;
 }
