@@ -684,7 +684,15 @@ a:hover {
     font-weight: 400;
     font-size: 32px;
   }
-
+  .body-text-bold{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .body-text-normal{
+    font-size: 25px;
+    font-weight: 500;
+  }
 
 }
 
@@ -692,18 +700,40 @@ a:hover {
 @media (min-width: 1200px) {
   
   .body-text-bold{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  .body-text-normal{
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1500px) {
+  .body-text-bold{
+    font-size: 33px;
+    font-weight: 700;
+  }
+  
+  
+  .body-text-normal{
+    font-size: 29px;
+    font-weight: 500;
+  }
+
+}
+
+@media (min-width: 2000px) {
+  .body-text-bold{
     font-size: 40px;
     font-weight: 700;
   }
   
   .body-text-normal{
-    font-size: 30px;
+    font-size: 37px;
     font-weight: 500;
   }
-}
-
-@media (min-width: 2000px) {
-
 
 }
 
