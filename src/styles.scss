@@ -22,11 +22,12 @@ body {
 a {
   color: black !important;
 }
-
-.fb-color {
-  color: #3271a9 !important;
+// Margin on px
+.mleft-5{
+  margin-left: 5px;
 }
 
+// button
 .btn-color {
   background: $button-color;
 }
@@ -249,6 +250,8 @@ a:hover {
     url(./assets/images/Compressed/Banner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/Banner.jpg);
+  height: 567px !important;
+  padding-top: 80px;
 }
 .serv-jumbotron {
   background-image: -webkit-gradient(
@@ -261,6 +264,8 @@ a:hover {
     url(./assets/images/Compressed/servbanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/servbanner.jpg);
+  height: 319px !important;
+  padding-top: 41px;
 }
 
 .podcast-jumbotron {
@@ -274,6 +279,8 @@ a:hover {
     url(./assets/images/Compressed/podbanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/podbanner.jpg);
+  height: 319px !important;
+  padding-top: 15px;
 }
 
 .aboutus-jumbotron {
@@ -287,6 +294,8 @@ a:hover {
     url(./assets/images/Compressed/auBanner.jpg);
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/auBanner.jpg);
+  height: 319px !important;
+  padding-top: 75px;
 }
 
 .contactus-jumbotron {
@@ -301,6 +310,8 @@ a:hover {
   background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/cubanner.jpg);
   background-position: center;
+  height: 319px !important;
+  padding-top: 80px;
 }
 
 .login-image {
@@ -338,6 +349,8 @@ a:hover {
     url(./assets/images/Compressed/Homepage_Footer.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/Homepage_Footer.jpg);
+    height: 419px !important;
+  // padding-top: 80px;
 }
 
 .main-menu {
@@ -346,30 +359,6 @@ a:hover {
 .display-4 {
   font-weight: 500;
 }
-
-// .mobile .mob-a-block {
-//   font-weight: 500;
-// }
-
-// Mobile
-// .mobile {
-//   .mob-a-block {
-//     display: block;
-//     font-weight: 500;
-//   }
-// }
-
-// .mob-a-block {
-//   display: none;
-// }
-
-// .mobile .desc-a-block {
-//   display: none;
-// }
-
-// .desc-a-block {
-//   display: block;
-// }
 
 // Description
 .description {
@@ -465,17 +454,22 @@ a:hover {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .serv-jumbotron,
-  .podcast-jumbotron,
-  .aboutus-jumbotron,
+  .home-jumbotron {
+    padding-top: 183px;
+    // height: 60vh !important;
+  }
+  .serv-jumbotron {
+    padding-top: 142px;
+  }
+  .podcast-jumbotron {
+    padding-top: 91px;
+  }
+  .aboutus-jumbotron {
+    padding-top: 169px;
+  }
   .contactus-jumbotron {
     // height: 50vh !important;
-    padding-top: 7%;
-  }
-
-  .home-jumbotron {
-    padding-top: 9%;
-    // height: 60vh !important;
+    padding-top: 169px;
   }
 
   .mar-left {
@@ -489,9 +483,6 @@ a:hover {
   .wait-list,
   .home-jumbotron {
     margin-top: 0px;
-  }
-  .podcast-jumbotron {
-    padding-top: 5% !important;
   }
   .text-col {
     width: 90% !important;
@@ -536,14 +527,19 @@ a:hover {
   .serv-jumbotron,
   .podcast-jumbotron,
   .aboutus-jumbotron,
-  .contactus-jumbotron {
-    height: 60vh !important;
+  .contactus-jumbotron,
+  .footer-jumbotron
+   {
+    height: 518px !important; 
     margin-top: 0px;
   }
 
   .home-jumbotron {
-    height: 80vh !important;
+    height: 867px !important;
     margin-top: 0px;
+  }
+  .footer-jumbotron{
+    height: 450px !important; 
   }
 
   .mar-left {
@@ -587,12 +583,12 @@ a:hover {
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron {
-    height: 60vh !important;
+    height: 518px !important;
     margin-top: 0px;
   }
 
   .home-jumbotron {
-    height: 100vh !important;
+    height: 867px !important;
     margin-top: 0px;
   }
   .mar-left {
@@ -647,22 +643,22 @@ a:hover {
   font-size: 18px;
 }
 
-.top-desc-normal{
+.top-desc-normal {
   font-size: 22px;
   font-weight: 500;
 }
 
-.top-desc-bold{
+.top-desc-bold {
   font-size: 22px;
   font-weight: 700;
 }
 
-.body-text-bold{
+.body-text-bold {
   font-size: 20px;
   font-weight: 700;
 }
 
-.body-text-normal{
+.body-text-normal {
   font-size: 18px;
   font-weight: 500;
 }
@@ -671,7 +667,6 @@ a:hover {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  
 }
 
 // Large devices (desktops, 992px and up)
@@ -684,12 +679,22 @@ a:hover {
     font-weight: 400;
     font-size: 32px;
   }
-  .body-text-bold{
-    font-size: 30px;
+  .top-desc-normal {
+    font-size: 38px;
+    font-weight: 500;
+  }
+  
+  .top-desc-bold {
+    font-size: 38px;
     font-weight: 700;
   }
   
-  .body-text-normal{
+  .body-text-bold {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .body-text-normal {
     font-size: 25px;
     font-weight: 500;
   }
@@ -699,42 +704,40 @@ a:hover {
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   
-  .body-text-bold{
+  .body-text-bold {
     font-size: 30px;
     font-weight: 700;
   }
-  
-  .body-text-normal{
+
+  .body-text-normal {
     font-size: 25px;
     font-weight: 500;
   }
+
 }
 
 @media (min-width: 1500px) {
-  .body-text-bold{
+  .body-text-bold {
     font-size: 33px;
     font-weight: 700;
   }
-  
-  
-  .body-text-normal{
+
+  .body-text-normal {
     font-size: 29px;
     font-weight: 500;
   }
-
 }
 
 @media (min-width: 2000px) {
-  .body-text-bold{
+  .body-text-bold {
     font-size: 40px;
     font-weight: 700;
   }
-  
-  .body-text-normal{
+
+  .body-text-normal {
     font-size: 37px;
     font-weight: 500;
   }
-
 }
 
 //  Contact us

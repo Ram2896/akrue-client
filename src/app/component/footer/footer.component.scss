@@ -1,13 +1,46 @@
-.footer-text{
-    font-weight: 100;
-    font-size: 0.9rem;
+.foo-logo-bold{
+    font-size: 40px;
+    font-weight: 700;
 }
 
-.footer-text-small{
-    font-weight: 100;
-    font-size: 0.75rem;
+.footer-text{
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.footer-text-bold{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.email-head{
+    font-weight: 700;
+    font-size: 11px;
 }
 
 .copy-text {
     text-align: center;
+}
+
+@media (min-width: 992px) {
+    .foo-logo-bold{
+        font-size: 60px;
+        font-weight: 700;
+    }
+    
+    .footer-text{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    
+    .footer-text-bold{
+        font-weight: 700;
+        font-size: 21px;
+    }
+    
+    .email-head{
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
 }
