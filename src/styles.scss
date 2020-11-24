@@ -12,6 +12,8 @@ $button-color: #0166ff;
 
 $font-family: Montserrat;
 
+$muted-color : #CCCCCC;
+
 html {
   scroll-behavior: smooth;
 }
@@ -662,6 +664,11 @@ a:hover {
   font-size: 18px;
   font-weight: 500;
 }
+
+.body-text-small {
+  font-size: 13px;
+  font-weight: 500;
+}
 @media (min-width: 576px) {
 }
 
@@ -698,7 +705,13 @@ a:hover {
     font-size: 25px;
     font-weight: 500;
   }
-
+  .body-text-small {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .auth-mar-top{
+    margin-top: 80px;
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -711,6 +724,11 @@ a:hover {
 
   .body-text-normal {
     font-size: 25px;
+    font-weight: 500;
+  }
+
+  .body-text-small {
+    font-size: 22px;
     font-weight: 500;
   }
 
@@ -762,4 +780,19 @@ a:hover {
   box-shadow: 0 0 BLACK;
   box-shadow: 0 0 BLACK;
   box-shadow: 0 0 BLACK;
+}
+
+// Auth
+
+.auth-mar-top{
+  margin-top: 60px;
+}
+
+.auth-btn{
+  width: 141px;
+  height: 48px;
+}
+
+.auth-muted-color{
+  color: $muted-color;
 }

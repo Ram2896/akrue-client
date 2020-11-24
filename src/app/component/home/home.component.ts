@@ -20,9 +20,9 @@ export class HomeComponent implements OnInit {
     AOS.init({
       once: true,
       offset: 200,
-      duration: 700,
+      duration: 1000,
       easing: "ease-in-sine",
-      delay: 400,
+      delay: 1500
     });
     console.log(this._deviceDetectorService.isMobile);
     this._helper.addComponentname("home");

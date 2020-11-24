@@ -2,55 +2,68 @@
   <div class="container-fluid">
     <div class="row">
       <!-- <div class="container"> -->
-        <div class="col-md-8 col-lg-8">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <img
-                  src="./assets/images/Compressed/Akrue_logo.jpg"
-                  class="p-0 login-logo"
-                />
-              </div>
+      <div class="col-md-8 col-lg-8">
+        <div class="container-fluid">
+          <div class="row auth-mar-top">
+            <div class="col-md-3 offset-md-2 col-lg-3 offset-lg-3">
+              <img
+                src="./assets/images/Compressed/Akrue_logo.jpg"
+                class="p-0 login-logo"
+              />
             </div>
-          </div>
-          <div class="container-fluid log-marigin">
-            <div class="row">
-              <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control cj-bg-color cj-text-color rounded-0"
-                      name="email"
-                      placeholder="Email"
-                      formControlName="email"
-                      [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      class="form-control cj-bg-color cj-text-color rounded-0"
-                      name="password"
-                      aria-describedby="emailHelp"
-                      placeholder="Password"
-                      formControlName="password"
-                      [ngClass]="{ 'is-invalid': submitted && l.password.errors }"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    class="btn btn-primary btn-lg contact-btn w-50"
-                  >
-                    Submit
-                  </button>
-                </form>
-              </div>
+            <div class="col-md-7 col-lg-6   d-inline-flex">
+              <!-- <p class="body-text-small auth-muted-color ml-md-4 ml-sm-0 mt-3">Don’t Have an Account</p> -->
+              <a
+                class="btn btn-color ml-auto auth-btn  mobile-contact-btn text-white"
+                routerLink="/contact-us"
+              >
+                Sign Up
+              </a>
             </div>
           </div>
         </div>
+        <div class="container-fluid log-marigin">
+          <div class="row">
+            <div class="col-md-10 offset-md-2 col-lg-6 offset-lg-3">
+              <p class="heading">Login</p>
+              <p class="body-text-small">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              </p>
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control cj-bg-color cj-text-color rounded-0"
+                    name="email"
+                    placeholder="Email"
+                    formControlName="email"
+                    [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control cj-bg-color cj-text-color rounded-0"
+                    name="password"
+                    aria-describedby="emailHelp"
+                    placeholder="Password"
+                    formControlName="password"
+                    [ngClass]="{ 'is-invalid': submitted && l.password.errors }"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg contact-btn w-50"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- </div> -->
       <div class="col-md-4 col-lg-4 p-0 md-hide">
         <div class="login-image jumbotron"></div>
@@ -64,7 +77,8 @@
   <div class="row">
     <div class="col mx-3 my-4">
       <p class="my-0 font-normal">
-        Be one of the first student athletes to monitize your personal brand. Sign up 
+        Be one of the first student athletes to monitize your personal brand.
+        Sign up
       </p>
       <p class="font-normal">for our waitlist to join Akrue</p>
       <!-- <a  class="btn btn-color btn-lg active contact-btn text-white" routerLink="/wait-list">
