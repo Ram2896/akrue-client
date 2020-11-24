@@ -12,7 +12,7 @@ $button-color: #0166ff;
 
 $font-family: Montserrat;
 
-$muted-color : #CCCCCC;
+$muted-color: #cccccc;
 
 html {
   scroll-behavior: smooth;
@@ -25,7 +25,7 @@ a {
   color: black !important;
 }
 // Margin on px
-.mleft-5{
+.mleft-5 {
   margin-left: 5px;
 }
 
@@ -40,126 +40,12 @@ a {
   box-shadow: 0 0 black;
 }
 
-// Animations
-
-// Fade in
-// @keyframes fadein {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @-moz-keyframes fadein {
-//   /* Firefox */
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @-webkit-keyframes fadein {
-//   /* Safari and Chrome */
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-// @-o-keyframes fadein {
-//   /* Opera */
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes fadeInUp {
-//   from {
-//     transform: translate3d(0, 40px, 0);
-//   }
-
-//   to {
-//     transform: translate3d(0, 0, 0);
-//     opacity: 1;
-//   }
-// }
-
-// @-webkit-keyframes fadeInUp {
-//   from {
-//     transform: translate3d(0, 40px, 0);
-//   }
-
-//   to {
-//     transform: translate3d(0, 0, 0);
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes fadeInDown {
-//   from {
-//     transform: translate3d(0, -40px, 0);
-//   }
-
-//   to {
-//     transform: translate3d(0, 0, 0);
-//     opacity: 1;
-//   }
-// }
-
-// @-webkit-keyframes fadeInDown {
-//   from {
-//     transform: translate3d(0, -40px, 0);
-//   }
-
-//   to {
-//     transform: translate3d(0, 0, 0);
-//     opacity: 1;
-//   }
-// }
-
-// .animated {
-//   animation-duration: 2s;
-//   -webkit-animation-duration: 2s;
-//   -moz-animation-duration: 2s; /* Firefox */
-//   -o-animation-duration: 2s;
-
-//   animation-fill-mode: both;
-//   -webkit-animation-fill-mode: both;
-// }
-
-// .animatedFade {
-//   opacity: 0;
-// }
-
-// .fadeInUp {
-//   opacity: 0;
-//   animation-name: fadeInUp;
-//   -webkit-animation-name: fadeInUp;
-// }
-
-// .fadeInDown {
-//   opacity: 0;
-//   animation-name: fadeInDown;
-//   -webkit-animation-name: fadeInDown;
-// }
-// Animatin end
-
 .fa {
-  //   background: black;
-  //   color: white!important;
-  //   padding: 7px;
   font-size: 20px;
   width: 30px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  //   border-radius: 50%;
 }
 
 // Nav bar
@@ -226,20 +112,13 @@ a:hover {
   margin-top: 80px;
 }
 .jumbotron {
-  // padding: 1rem;
-  // margin-top: 50px;
 
-  // height: 85vh !important;
   margin-top: 80px;
   background-size: cover;
   background-position: top;
   background-attachment: initial;
   margin-bottom: 0;
 }
-
-// .serv-jumbotron,.podcast-jumbotron ,.aboutus-jumbotron, .contactus-jumbotron{
-//   height: 50vh !important;
-// }
 
 .home-jumbotron {
   background-image: -webkit-gradient(
@@ -351,7 +230,7 @@ a:hover {
     url(./assets/images/Compressed/Homepage_Footer.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/Homepage_Footer.jpg);
-    height: 419px !important;
+  height: 419px !important;
   // padding-top: 80px;
 }
 
@@ -401,16 +280,6 @@ a:hover {
   display: block;
 }
 
-// .mobile {
-// .description{
-//   margin: 0 20px;
-// }
-// /}
-
-// footer
-
-// Responsive
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .serv-jumbotron,
@@ -436,15 +305,6 @@ a:hover {
     border: 0;
     border-radius: 0;
   }
-
-  // .nav-type{
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   z-index: 1030;
-  // }
-
   .nav-type {
     position: fixed;
     top: 0;
@@ -530,9 +390,8 @@ a:hover {
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron,
-  .footer-jumbotron
-   {
-    height: 518px !important; 
+  .footer-jumbotron {
+    height: 518px !important;
     margin-top: 0px;
   }
 
@@ -540,8 +399,8 @@ a:hover {
     height: 867px !important;
     margin-top: 0px;
   }
-  .footer-jumbotron{
-    height: 450px !important; 
+  .footer-jumbotron {
+    height: 450px !important;
   }
 
   .mar-left {
@@ -574,9 +433,6 @@ a:hover {
     top: 0;
     z-index: 1020;
   }
-  // .footer-left {
-  //   padding: 0 70px;
-  // }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -690,12 +546,12 @@ a:hover {
     font-size: 38px;
     font-weight: 500;
   }
-  
+
   .top-desc-bold {
     font-size: 38px;
     font-weight: 700;
   }
-  
+
   .body-text-bold {
     font-size: 30px;
     font-weight: 700;
@@ -709,14 +565,13 @@ a:hover {
     font-size: 18px;
     font-weight: 500;
   }
-  .auth-mar-top{
+  .auth-mar-top {
     margin-top: 80px;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  
   .body-text-bold {
     font-size: 30px;
     font-weight: 700;
@@ -731,7 +586,6 @@ a:hover {
     font-size: 22px;
     font-weight: 500;
   }
-
 }
 
 @media (min-width: 1500px) {
@@ -784,15 +638,15 @@ a:hover {
 
 // Auth
 
-.auth-mar-top{
+.auth-mar-top {
   margin-top: 60px;
 }
 
-.auth-btn{
+.auth-btn {
   width: 141px;
   height: 48px;
 }
 
-.auth-muted-color{
+.auth-muted-color {
   color: $muted-color;
 }
