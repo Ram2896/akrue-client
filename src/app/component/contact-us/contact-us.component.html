@@ -8,9 +8,12 @@
       <p class="lead">Reach out with any questions or inquiries</p>
     </div>
   </div>
-  <div class="container-fluid description text-center ">
+  <div
+    class="container-fluid description text-center"
+    data-aos="fade-up"
+  >
     <div class="row">
-      <div class="col mx-3 my-4">
+      <div class="col mx-3 my-4" data-aos="fade-up">
         <p class="my-0 top-desc-normal">
           80% OF STUDENT ATHLETES LIVE BELOW THE POVERTY LINE
         </p>
@@ -20,7 +23,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 offset-md-2 marginy-50">
+      <div class="col-md-6 offset-md-3 marginy-50">
         <p class=" mb-0 cn-fs-500-40">Connect</p>
         <p class=" mb-0 cn-fs-500-23">
           Find out more about AKRUE and what we are working on.
@@ -37,13 +40,14 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-8 offset-md-2" data-aos="fade-up">
+      <div class="col-md-6 offset-md-3" data-aos="fade-up">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="row">
             <div class="col-md-6 pr-0">
               <div class="form-group mb-2">
                 <input
                   type="text"
+                  style="height: 50px;"
                   class="form-control cj-bg-color"
                   name="Fullname"
                   placeholder="Name"
@@ -56,6 +60,7 @@
               <div class="form-group mb-2">
                 <input
                   type="email"
+                  style="height: 50px;"
                   class="form-control cj-bg-color"
                   name="Email"
                   aria-describedby="emailHelp"
@@ -74,14 +79,14 @@
                   formControlName="Comment"
                   name="Comment"
                   placeholder="Message"
-                  style="height: 150px;"
+                  style="height: 304px;"
                   [ngClass]="{ 'is-invalid': submitted && c.Comment.errors }"
                 >
                 </textarea>
               </div>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg contact-btn w-50 marginy-50">
+          <button type="submit" class="btn btn-primary  w-50 submit-margin sub-btn">
             Submit
           </button>
         </form>
@@ -91,14 +96,18 @@
 </div>
 <div class="container-fluid description text-center">
   <div class="row">
-    <div class="col mx-3 my-4">
-      <p class="my-0 font-normal">
+    <div class="col mx-3 martb-55px">
+      <p class="my-0 font-normal md-hide bottom-desc-normal">
         Be one of the first student athletes to monitize your personal brand.
         Sign up
       </p>
-      <p class="font-normal">for our waitlist to join Akrue</p>
+      <p class="font-normal md-hide bottom-desc-normal">for our waitlist to join Akrue</p>
+      <p class="font-normal md-hide-rev bottom-desc-normal">
+        Be one of the first student athletes to monitize your personal brand.
+        Sign up for our waitlist to join Akrue
+      </p>
       <a
-        class="btn btn-color btn-lg active contact-btn text-white"
+        class="btn btn-color active jwl-btn text-white mt-2"
         routerLink="/wait-list"
       >
         JOIN THE WAITLIST

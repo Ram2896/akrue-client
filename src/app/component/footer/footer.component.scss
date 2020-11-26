@@ -1,46 +1,59 @@
-.foo-logo-bold{
-    font-size: 40px;
-    font-weight: 700;
+.foo-logo-bold {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50.31px;
 }
 
-.footer-text{
-    font-weight: 400;
-    font-size: 11px;
+.footer-text-desc {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 33px;
+}
+.footer-text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 32.69px;  
 }
 
-.footer-text-bold{
-    font-weight: 700;
-    font-size: 12px;
+.footer-text-bold {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 45.76px;
+
 }
 
-.email-head{
-    font-weight: 700;
-    font-size: 11px;
+.email-head {
+  font-weight: 700;
+  font-size: 11px;
 }
 
 .copy-text {
-    text-align: center;
+  text-align: center;
 }
 
 @media (min-width: 992px) {
-    .foo-logo-bold{
-        font-size: 60px;
-        font-weight: 700;
-    }
-    
-    .footer-text{
-        font-weight: 400;
-        font-size: 15px;
-    }
-    
-    .footer-text-bold{
-        font-weight: 700;
-        font-size: 21px;
-    }
-    
-    .email-head{
-        font-weight: 700;
-        font-size: 15px;
-    }
-    
+  .foo-logo-bold {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+  }
+  .footer-text-desc {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 33px;
+  }
+  .footer-text {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+  .footer-text-bold {
+    font-weight: 700;
+    font-size: 21px;
+  }
+
+  .email-head {
+    font-weight: 700;
+    font-size: 15px;
+  }
 }

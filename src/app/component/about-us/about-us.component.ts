@@ -12,12 +12,12 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit(): void {
     this._helper.addComponentname("aboutus");
-    AOS.init({
-      once: true,
-      offset: 200,
-      duration: 700,
-      easing: "ease-in-sine",
-      delay: 400,
-    });
+    // AOS.init({
+    //   once: true,
+    //   offset: 200,
+    //   duration: 400,
+    //   easing: "ease-in-sine",
+    //   delay: 300
+    // });
   }
 }

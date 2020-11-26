@@ -1,14 +1,57 @@
-.marginy-50{
-    margin-top: 50px;
-    margin-bottom: 67px;
+.marginy-50 {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.cn-fs-500-40{
+.submit-margin{
+  margin-top: 39px;
+  margin-bottom: 74px;
+}
+
+.sub-btn{
+  border-radius: 45px;
+  height: 50px;
+}
+
+.cn-fs-500-40 {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 48.76px;
+}
+
+.cn-fs-500-23 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28.04px;
+}
+
+.fa {
+  width: 17px;
+  height: 12px;
+  margin-left: 10px;
+}
+
+@media (min-width: 992px) {
+  .cn-fs-500-40 {
     font-size: 40px;
     font-weight: 500;
-}
+    line-height: 48.76px;
+  }
 
-.cn-fs-500-23{
+  .cn-fs-500-23 {
     font-size: 23px;
     font-weight: 500;
+    line-height: 28.04px;
+  }
+
+  .fa {
+    width: 17px;
+    height: 12px;
+    margin-left: 21px;
+  }
+  .marginy-50 {
+    margin-top: 50px;
+    margin-bottom: 67px;
+  }
+  
 }

@@ -29,6 +29,20 @@ a {
   margin-left: 5px;
 }
 
+.martb-55px {
+  margin-bottom:55px;
+  margin-top: 55px;
+}
+
+.martb-60px {
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.martb-15 {
+  margin-top: 18px;
+  margin-bottom: 22px;
+}
 // button
 .btn-color {
   background: $button-color;
@@ -38,6 +52,16 @@ a {
 .btn:focus {
   outline: 0;
   box-shadow: 0 0 black;
+}
+
+.jwl-btn {
+  width: 262px;
+  height: 49px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  border-radius: 45px;
 }
 
 .fa {
@@ -90,6 +114,9 @@ a:hover {
   display: block;
 }
 
+// Animation
+
+
 // Jumbo tron
 
 .jumbotron p,
@@ -112,7 +139,6 @@ a:hover {
   margin-top: 80px;
 }
 .jumbotron {
-
   margin-top: 80px;
   background-size: cover;
   background-position: top;
@@ -230,7 +256,7 @@ a:hover {
     url(./assets/images/Compressed/Homepage_Footer.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./assets/images/Compressed/Homepage_Footer.jpg);
-  height: 419px !important;
+  height: 700px !important;
   // padding-top: 80px;
 }
 
@@ -399,9 +425,9 @@ a:hover {
     height: 867px !important;
     margin-top: 0px;
   }
-  .footer-jumbotron {
-    height: 450px !important;
-  }
+  // .footer-jumbotron {
+  //   height: 450px !important;
+  // }
 
   .mar-left {
     margin-left: 30px !important;
@@ -485,6 +511,14 @@ a:hover {
   .text-col {
     width: 75% !important;
   }
+
+  .container {
+    max-width: 1366px;
+  }
+
+  .mar-left {
+    margin-left: 90px !important;
+  }
 }
 // Container width only
 
@@ -495,10 +529,12 @@ a:hover {
 .heading {
   font-weight: 700;
   font-size: 40px;
+  line-height: 45px;
 }
 .small-text {
   font-weight: 400;
   font-size: 18px;
+  line-height: 27px;
 }
 
 .top-desc-normal {
@@ -511,6 +547,12 @@ a:hover {
   font-weight: 700;
 }
 
+.bottom-desc-normal {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
 .body-text-bold {
   font-size: 20px;
   font-weight: 700;
@@ -519,6 +561,7 @@ a:hover {
 .body-text-normal {
   font-size: 18px;
   font-weight: 500;
+  line-height: 30.32px;
 }
 
 .body-text-small {
@@ -534,13 +577,21 @@ a:hover {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  .jwl-btn {
+    width: 401px;
+    height: 49px;
+    font-size: 28px;
+    line-height: 34px;
+  }
   .heading {
     font-weight: 700;
     font-size: 68px;
+    line-height: 82.89px;
   }
   .small-text {
     font-weight: 400;
     font-size: 32px;
+    line-height: 39px;
   }
   .top-desc-normal {
     font-size: 38px;
@@ -551,7 +602,11 @@ a:hover {
     font-size: 38px;
     font-weight: 700;
   }
-
+  .bottom-desc-normal {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+  }
   .body-text-bold {
     font-size: 30px;
     font-weight: 700;
@@ -560,6 +615,7 @@ a:hover {
   .body-text-normal {
     font-size: 25px;
     font-weight: 500;
+    line-height: 49.32px;
   }
   .body-text-small {
     font-size: 18px;

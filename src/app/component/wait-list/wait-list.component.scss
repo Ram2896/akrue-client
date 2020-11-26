@@ -1,3 +1,40 @@
-.wl-form-cont{
-    margin-bottom: 80px;
+input,
+select {
+  height: 60px !important;
+}
+
+.wl-form-cont {
+  margin-bottom: 80px;
+}
+
+.martb-wl-85px {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.wl-heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  // font-size: 67px;
+  // font-weight: 700;
+  // line-height: 81px;
+}
+
+.wl-sum-btn {
+  height: 72px;
+  width: 322px;
+  border-radius: 45px;
+}
+
+@media (min-width: 992px) {
+  .wl-heading {
+    font-size: 67px;
+    font-weight: 700;
+    line-height: 81px;
+  }
+  .martb-wl-85px {
+    margin-top: 85px;
+    margin-bottom: 75px;
+  }
 }

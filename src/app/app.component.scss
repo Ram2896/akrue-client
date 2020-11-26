@@ -10,15 +10,15 @@ img{
     height: 30px;
   }
 .row{
-    margin-top: 150px;
+    margin-top: 45vh;
 }
 
-.blink_me {
-  animation: blinker 1s linear infinite;
-}
+// .blink_me {
+//   animation: blinker 1s linear infinite;
+// }
 
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
+// @keyframes blinker {
+//   50% {
+//     opacity: 0;
+//   }
+// }

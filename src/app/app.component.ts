@@ -15,10 +15,11 @@ export class AppComponent {
   }
   ngOnInit(){
     AOS.init({
+      once: true,
       offset: 200,
-      duration: 100,
+      duration: 400,
       easing: "ease-in-sine",
-      delay: 100
+      delay: 300
     });
     // AOS.init();
     setTimeout(() => {

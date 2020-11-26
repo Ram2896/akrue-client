@@ -17,13 +17,13 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    AOS.init({
-      once: true,
-      offset: 200,
-      duration: 1500,
-      easing: "ease-in-sine",
-      delay: 1000
-    });
+    // AOS.init({
+    //   once: true,
+    //   offset: 200,
+    //   duration: 400,
+    //   easing: "ease-in-sine",
+    //   delay: 300
+    // });
     console.log(this._deviceDetectorService.isMobile);
     this._helper.addComponentname("home");
   }

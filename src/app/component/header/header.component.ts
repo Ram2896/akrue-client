@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     AOS.init({
       once: true,
       offset: 200,
-      duration: 700,
+      duration: 300,
       easing: "ease-in-sine",
       delay: 400,
     });

@@ -1,6 +1,6 @@
 <div *ngIf="!this._helper.getComponentname()">
   <div class="container con-width md-hide" >
-    <div class="row header mleft-5">
+    <div class="row header mleft-5 martb-15">
       <div class="col text-left">
         <a href=""  target="_blank" class="fa fa-youtube-play"></a>
         <a href="https://twitter.com/akruemedia?s=11"  target="_blank" class="fa fa-twitter"></a>
@@ -53,7 +53,6 @@
               [ngClass]="{'active': selectedItem == item}"
               (click)="listClick($event, item)"
               *ngFor="let item of menuItems"
-              data-aos="flip-right"
             >
               <a class="nav-link font-weight-bold" 
               (click)="closeMenu()"

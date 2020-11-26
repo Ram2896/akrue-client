@@ -5,8 +5,8 @@ import {
   FormGroup,
   Validators,
 } from "@angular/forms";
-import { HelperService } from 'src/app/service/helper.service';
-import * as AOS from 'aos';
+import { HelperService } from "src/app/service/helper.service";
+import * as AOS from "aos";
 
 @Component({
   selector: "app-contact-us",
@@ -16,13 +16,19 @@ import * as AOS from 'aos';
 export class ContactUsComponent implements OnInit {
   contactForm: FormGroup;
   submitted = false;
-  constructor(private _formBuilder: FormBuilder,
-    private _helper:HelperService
-
-    ) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _helper: HelperService
+  ) {}
 
   ngOnInit(): void {
-    AOS.init();
+    // AOS.init({
+    //   once: true,
+    //   offset: 200,
+    //   duration: 400,
+    //   easing: "ease-in-sine",
+    //   delay: 300,
+    // });
     this.contactForm = this._formBuilder.group({
       Fullname: new FormControl("", [Validators.required]),
       Email: new FormControl("", [
@@ -30,8 +36,7 @@ export class ContactUsComponent implements OnInit {
       ]),
       Comment: new FormControl("", [Validators.required]),
     });
-  this._helper.addComponentname("contactus"); 
-
+    this._helper.addComponentname("contactus");
   }
 
   get c() {

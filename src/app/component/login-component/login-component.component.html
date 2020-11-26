@@ -5,30 +5,30 @@
       <div class="col-md-8 col-lg-8">
         <div class="container-fluid">
           <div class="row auth-mar-top">
-            <div class="col-md-3 offset-md-2 col-lg-3 offset-lg-3">
+            <div class="col-md-3 offset-md-2 col-lg-3 offset-lg-3 mt-auto">
               <img
                 src="./assets/images/Compressed/Akrue_logo.jpg"
                 class="p-0 login-logo"
               />
             </div>
-            <div class="col-md-7 col-lg-6   d-inline-flex">
-              <!-- <p class="body-text-small auth-muted-color ml-md-4 ml-sm-0 mt-3">Don’t Have an Account</p> -->
+            <!-- <div class="col-md-7 col-lg-6   d-inline-flex">
+              <p class="body-text-small auth-muted-color ml-md-4 ml-sm-0 mt-3">Don’t Have an Account</p> 
               <a
                 class="btn btn-color ml-auto auth-btn  mobile-contact-btn text-white"
                 routerLink="/contact-us"
               >
                 Sign Up
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="container-fluid log-marigin">
           <div class="row">
             <div class="col-md-10 offset-md-2 col-lg-6 offset-lg-3">
               <p class="heading">Login</p>
-              <p class="body-text-small">
+              <!-- <p class="body-text-small">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-              </p>
+              </p> -->
               <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
                   <input
@@ -37,7 +37,7 @@
                     name="email"
                     placeholder="Email"
                     formControlName="email"
-                    [ngClass]="{ 'is-invalid': submitted && l.email.errors }"
+                    [ngClass]="{ 'is-invalid': submittgited && l.email.errors }"
                   />
                 </div>
 
@@ -75,15 +75,22 @@
 </div>
 <div class="container-fluid description text-center">
   <div class="row">
-    <div class="col mx-3 my-4">
-      <p class="my-0 font-normal">
+    <div class="col mx-3 martb-55px">
+      <p class="my-0 font-normal md-hide bottom-desc-normal">
         Be one of the first student athletes to monitize your personal brand.
         Sign up
       </p>
-      <p class="font-normal">for our waitlist to join Akrue</p>
-      <!-- <a  class="btn btn-color btn-lg active contact-btn text-white" routerLink="/wait-list">
+      <p class="font-normal md-hide bottom-desc-normal">for our waitlist to join Akrue</p>
+      <p class="font-normal md-hide-rev bottom-desc-normal">
+        Be one of the first student athletes to monitize your personal brand.
+        Sign up for our waitlist to join Akrue
+      </p>
+      <a
+        class="btn btn-color active jwl-btn text-white mt-2"
+        routerLink="/wait-list"
+      >
         JOIN THE WAITLIST
-      </a> -->
+      </a>
     </div>
   </div>
 </div>

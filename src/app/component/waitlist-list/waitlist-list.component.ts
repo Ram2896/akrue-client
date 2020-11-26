@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HelperService } from 'src/app/service/helper.service';
+import * as AOS from "aos";
 
 @Component({
   selector: "app-waitlist-list",
@@ -15,6 +16,13 @@ export class WaitlistListComponent implements OnInit {
   wList: any;
 
   ngOnInit(): void {
+    // AOS.init({
+    //   once: true,
+    //   offset: 200,
+    //   duration: 400,
+    //   easing: "ease-in-sine",
+    //   delay: 300
+    // });
     this.wList = [
       {
         firstName: "Ram",

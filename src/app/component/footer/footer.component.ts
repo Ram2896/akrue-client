@@ -15,11 +15,11 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     AOS.init({
       once: true,
-      duration: 1500,
+      duration: 300,
       offset: 200,
       easing: "linear",
     });
-    this._helper.addComponentname("footer"); 
+    // this._helper.addComponentname("footer"); 
   }
 
 }
