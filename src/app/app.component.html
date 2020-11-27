@@ -1,4 +1,4 @@
-<div *ngIf="showLoader">
+<!-- <div *ngIf="showLoader">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -7,13 +7,23 @@
         <!-- <p class="text-center heading">Akrue</p>
           <p class="text-center small-text">
             Use Akrue to Monitize Your Brand...
-          </p> -->
+          </p> 
+        </div>
+      </div>
+  </div>
+</div> -->
+<div id="overlay" *ngIf="showLoader">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <img src="./assets/images/Compressed/Akrue_logo.jpg" 
+        class="img-responsive center-block d-block mx-auto" alt="Sample Image">
         </div>
       </div>
   </div>
 </div>
+<!-- *ngIf="!showLoader" -->
 <div
-  *ngIf="!showLoader"
   [ngClass]="{'mobile' : this._deviceDetectorService.isMobile}"
 >
   <app-header></app-header>

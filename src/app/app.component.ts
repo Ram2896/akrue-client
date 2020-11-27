@@ -24,6 +24,6 @@ export class AppComponent {
     // AOS.init();
     setTimeout(() => {
       this.showLoader = false;
-    }, 4000);
+    }, 2000);
   }
 }

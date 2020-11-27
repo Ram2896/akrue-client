@@ -15,7 +15,7 @@
       class="navbar navbar-expand-md navbar-light bg-white nav-type static-top"
     >
       <div class="container con-width align-items-center">
-        <a class="navbar-brand py-0 m-0 " href="#">
+        <a class="navbar-brand py-0 m-0 " routerLink="/HOME">
           <img
             src="./assets/images/Compressed/Akrue_logo.jpg"
            class="akrue-logo"
@@ -25,6 +25,7 @@
         <a
           class="btn btn-color ml-auto my-2 my-sm-0 mobile-contact-btn md-hide-rev text-white"
           routerLink="/contact-us"
+          (click)="closeMenu()"
         >
           CONTACT US
         </a>
