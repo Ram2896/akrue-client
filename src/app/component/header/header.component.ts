@@ -34,11 +34,15 @@ export class HeaderComponent implements OnInit {
 
   listClick(event, newValue) {
     console.log(newValue);
-    this.selectedItem = newValue; // don't forget to update the model here
-    // ... do other stuff here ...
+
+    this.selectedItem = newValue; 
   }
   
   closeMenu() {
+    console.log("befo",this.selectedItem);
+    this.selectedItem = ""; 
+    console.log("after",this.selectedItem);
+
     $('.navbar-collapse').removeClass('show');   
     $('.navbar-collapse').addClass('hide');   
   }

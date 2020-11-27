@@ -41,7 +41,7 @@ a {
 
 .martb-15 {
   margin-top: 18px;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 // button
 .btn-color {
@@ -579,9 +579,10 @@ a:hover {
 @media (min-width: 992px) {
   .jwl-btn {
     width: 401px;
-    height: 49px;
+    height: 60px;
     font-size: 28px;
     line-height: 34px;
+    padding: 0.775rem .75rem;
   }
   .heading {
     font-weight: 700;
