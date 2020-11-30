@@ -1,20 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { HelperService } from 'src/app/service/helper.service';
+import { Component, OnInit } from "@angular/core";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
+import { Router, ActivatedRoute, ParamMap } from "@angular/router";
+import { ApiServService } from 'src/app/service/api-serv.service';
+import { HelperService } from "src/app/service/helper.service";
 @Component({
-  selector: 'app-login-component',
-  templateUrl: './login-component.component.html',
-  styleUrls: ['./login-component.component.scss']
+  selector: "app-login-component",
+  templateUrl: "./login-component.component.html",
+  styleUrls: ["./login-component.component.scss"],
 })
 export class LoginComponentComponent implements OnInit {
-
   loginForm: FormGroup;
   submitted = false;
-  constructor(private _formBuilder: FormBuilder,
-     private _router: Router,
-     private _helper:HelperService
-     ) {}
+  invalidLogin =true;
+  user: any ={};
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _router: Router,
+    private _helper: HelperService,
+    private _api :ApiServService
+  ) {}
 
   ngOnInit(): void {
     this.loginPage = "login";
@@ -24,10 +33,9 @@ export class LoginComponentComponent implements OnInit {
       ]),
       password: new FormControl("", [Validators.required]),
     });
-  this._helper.addComponentname("login"); 
+    this._helper.addComponentname("login");
   }
 
-  
   loginPage: string = "";
 
   get l() {
@@ -41,13 +49,22 @@ export class LoginComponentComponent implements OnInit {
       return;
     }
 
-    if(this.loginForm.value.email ==="admin@gmail.com" && this.loginForm.value.password ==="Admin" ){
-      this._router.navigate(['/admin/waitlist'])
-      // alert(
-      //   "SUCCESS!! :-)\n\n" + JSON.stringify(this.loginForm.value, null, 4)
-      // );
-    }
+    this.user = {email :this.loginForm.value.email, password : this.loginForm.value.password };
+    this._api.login(this.user).subscribe(
+      data=>{
+        sessionStorage.setItem("TOKEN", `Bearer ${data.token}`);
+        sessionStorage.setItem("USER", JSON.stringify(data.user));
+        this._router.navigate([`/admin/waitlist/${data.user._id}`]);
+        // console.log(data);
+        this.invalidLogin = false;
+      }, error=>{
+        console.log(error);
+        this.invalidLogin = true;
+      }
+    )
+    
+     
+   
     // display form values on success
   }
-
 }

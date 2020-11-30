@@ -31,7 +31,7 @@ export class HelperService {
 
   getComponentname() {
     let componentName=localStorage.getItem("name");
-    if(componentName === "login"){
+    if(componentName === "login" || componentName ==="userlist"){
       return true;
     }
   }

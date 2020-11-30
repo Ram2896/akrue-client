@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <select formControlName="title"   class="form-control cj-bg-color  rounded-0" [ngClass]="{ 'is-invalid': submitted && f.sports.errors }">
+            <select formControlName="sport"   class="form-control cj-bg-color  rounded-0" [ngClass]="{ 'is-invalid': submitted && f.sport.errors }">
               <option value="" [selected]="true">Sport</option>
               <option value="cricket">Cricket</option>
               <option value="basket_ball">BasketBall</option>
@@ -89,9 +89,9 @@
           <div class="form-group">
             <input
               type="text"
-              formControlName="instaUserName"
+              formControlName="instaUsername"
               class="form-control cj-bg-color  rounded-0"
-              [ngClass]="{ 'is-invalid': submitted && f.instaUserName.errors }"
+              [ngClass]="{ 'is-invalid': submitted && f.instaUsername.errors }"
               placeholder="Instagram Username"
             />
           </div>
@@ -113,9 +113,9 @@
           <div class="form-group">
             <input
               type="text"
-              formControlName="email"
+              formControlName="userEmail"
               class="form-control cj-bg-color  rounded-0"
-              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+              [ngClass]="{ 'is-invalid': submitted && f.userEmail.errors }"
               placeholder="Email"
             />
           </div>

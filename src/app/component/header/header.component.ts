@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     });
     // console.log(this._deviceDetectorService.isMobile);
     // console.log("component name", this._helper.getComponentname();)
-    this._helper.addComponentname("header");
+    // this._helper.addComponentname("header");
     this.menuopen = false;
   }
 

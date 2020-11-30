@@ -1,35 +1,50 @@
 <div class="container-fluids">
-
   <h1 class="text-center">Wait List</h1>
+  <div class="container my-4">
+    <button
+      class="btn btn-color active text-white mt-2 mx-4 ml-auto"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+    <button
+      class="btn btn-color active text-white mt-2 mr-auto"
+      (click)="download()"
+    >
+      Download
+    </button>
+  </div>
 </div>
 <div class="container wllist-form-cont">
   <div class="row">
-      <table class="table table-bordered">
-        <tr class="bg-primary">
-          <th  scope="col" class="mr-4">#</th> 
-            <th scope="col" class="mr-4">First Name</th> 
-            <th scope="col" class="mr-4">LastName</th>  
-            <th scope="col" class="mr-4">University</th>  
-            <th scope="col" class="mr-4">Graduating Year</th>  
-            <th scope="col" class="mr-4">Sports</th>  
-            <th scope="col" class="mr-4">Gender</th>  
-            <th scope="col" class="mr-4">Insta Name</th>  
-            <th scope="col" class="mr-4">Referer Email</th>  
-            <th scope="col" class="mr-4">User Email</th>  
-        </tr>
-          <tr scope="row" *ngFor="let list of wList;let i=index">
-            <td class="mr-4">{{i +1}}</td> 
-             <td class="mr-4">{{list.firstName}}</td> 
-             <td class="mr-4">{{list.lastName}}</td>  
-             <td class="mr-4">{{list.university}}</td>  
-             <td class="mr-4">{{list.graduatingYear}}</td>  
-             <td class="mr-4">{{list.sports}}</td>  
-             <td class="mr-4">{{list.gender}}</td>  
-             <td class="mr-4">{{list.instaUserName}}</td>  
-             <td class="mr-4">{{list.refererEmail}}</td>  
-             <td class="mr-4">{{list.email}}</td>  
-          </tr>
-      </table>
+    <table class="table table-bordered">
+      <tr class="bg-primary">
+        <th scope="col" class="mr-4">#</th>
+        <!-- <th scope="col" class="mr-4">First Name</th>  -->
+        <th scope="col" class="mr-4">LastName</th>
+        <th scope="col" class="mr-4">University</th>
+        <th scope="col" class="mr-4">Graduating Year</th>
+        <th scope="col" class="mr-4">Sports</th>
+        <th scope="col" class="mr-4">Gender</th>
+        <!-- <th scope="col" class="mr-4">Insta Name</th>   -->
+        <!-- <th scope="col" class="mr-4">Referer Email</th>   -->
+        <th scope="col" class="mr-4">User Email</th>
+      </tr>
+      <tr scope="row" *ngFor="let list of wList;let i=index">
+        <td class="mr-4">{{i +1}}</td>
+        <!-- <td class="mr-4">{{list.firstName}}</td>  -->
+        <td class="mr-4">{{list.lastName}}</td>
+        <td class="mr-4">{{list.university}}</td>
+        <td class="mr-4">{{list.graduatingYear}}</td>
+        <td class="mr-4">{{list.sport}}</td>
+        <td class="mr-4">{{list.gender}}</td>
+        <!-- <td class="mr-4">{{list.instaUsername}}</td>   -->
+        <!-- <td class="mr-4">{{list.refererEmail}}</td>   -->
+        <td class="mr-4">{{list.userEmail}}</td>
+      </tr>
+    </table>
   </div>
 </div>
-<app-footer></app-footer>
+<div class="w-100">
+  <app-footer></app-footer>
+</div>

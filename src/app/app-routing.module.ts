@@ -8,6 +8,7 @@ import { PodcastComponent } from './component/podcast/podcast.component';
 import { ServiceComponent } from './component/service/service.component';
 import { WaitListComponent } from './component/wait-list/wait-list.component';
 import { WaitlistListComponent } from './component/waitlist-list/waitlist-list.component';
+import { RouteGuardService } from './service/route-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'wait-list', component: WaitListComponent },
   { path: 'admin/login', component: LoginComponentComponent },
-  { path: 'admin/waitlist', component: WaitlistListComponent },
+  { path: 'admin/waitlist/:userId', component: WaitlistListComponent ,canActivate: [RouteGuardService]},
   { path: '**', redirectTo: 'HOME'}
 ];
 

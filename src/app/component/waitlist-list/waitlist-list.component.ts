@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { HelperService } from 'src/app/service/helper.service';
+import { HelperService } from "src/app/service/helper.service";
 import * as AOS from "aos";
+import { ApiServService } from "src/app/service/api-serv.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { JsontocsvService } from 'src/app/service/jsontocsv.service';
 
 @Component({
   selector: "app-waitlist-list",
@@ -9,45 +12,45 @@ import * as AOS from "aos";
 })
 export class WaitlistListComponent implements OnInit {
   constructor(
-    private _helper:HelperService
-
+    private _helper: HelperService,
+    private _api: ApiServService,
+    private _router: Router,
+    private _activeRoute: ActivatedRoute,
+    private _jtocsv: JsontocsvService
   ) {}
 
-  wList: any;
-
+  wList: any = [];
+  userId: any;
   ngOnInit(): void {
-    // AOS.init({
-    //   once: true,
-    //   offset: 200,
-    //   duration: 400,
-    //   easing: "ease-in-sine",
-    //   delay: 300
-    // });
+    this.userId = this._activeRoute.snapshot.paramMap.get("userId");
+    this.getWaitlist(this.userId);
+
     this.wList = [
       {
         firstName: "Ram",
         lastName: "Chari",
         university: "PMU",
         graduatingYear: "2021",
-        sports: "Shuttle",
+        sport: "Shuttle",
         gender: "Male",
         instaUserName: "@ram96",
         refererEmail: "haris@gmail.com",
         email: "ram96@gmail.com",
       },
-      {
-        firstName: "Harish",
-        lastName: "babu",
-        university: "SU",
-        graduatingYear: "2022",
-        sports: "Shuttle",
-        gender: "Male",
-        instaUserName: "@Harish96",
-        refererEmail: "raghavan@gmail.com",
-        email: "harish96@gmail.com",
-      },
     ];
-  this._helper.addComponentname("userist"); 
+    this._helper.addComponentname("userlist");
+  }
 
+  getWaitlist(userid) {
+    this._api.getWaitList(userid).subscribe((data) => {
+      this.wList = data;
+    });
+  }
+  logout(){
+    this._api.logout();
+    this._router.navigate(["/admin/login"])
+  }
+  download(){
+    this._jtocsv.downloadFile(this.wList, 'jsontocsv');
   }
 }
