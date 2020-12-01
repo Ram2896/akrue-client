@@ -16,6 +16,7 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
 import { WaitListComponent } from './component/wait-list/wait-list.component';
 import { LoginComponentComponent } from './component/login-component/login-component.component';
 import { WaitlistListComponent } from './component/waitlist-list/waitlist-list.component';
+import { SubmitComponent } from './component/submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WaitlistListComponent } from './component/waitlist-list/waitlist-list.c
     ContactUsComponent,
     WaitListComponent,
     LoginComponentComponent,
-    WaitlistListComponent
+    WaitlistListComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,

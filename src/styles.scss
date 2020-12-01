@@ -237,6 +237,22 @@ a:hover {
   height: 319px !important;
   padding-top: 80px;
 }
+.submit-jumbotron{
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.8)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url(./assets/images/Compressed/submit-banner.jpg);
+  background-image: linear-gradient(#000000b3, rgba(0, 0, 0, 0.8)),
+    url(./assets/images/Compressed/submit-banner.jpg);
+  background-position: center;
+  height: 319px !important;
+  padding-top: 80px;
+}
+
 
 .login-image {
   margin-top: 0px;
@@ -329,7 +345,8 @@ a:hover {
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron,
-  .wait-list {
+  .wait-list ,
+  .submit-jumbotron{
     // height: 60vh !important;
     margin-top: 80px;
   }
@@ -386,7 +403,8 @@ a:hover {
   .aboutus-jumbotron,
   .contactus-jumbotron,
   .wait-list,
-  .home-jumbotron {
+  .home-jumbotron,
+  .submit-jumbotron {
     margin-top: 0px;
   }
   .text-col {
@@ -433,6 +451,7 @@ a:hover {
   .podcast-jumbotron,
   .aboutus-jumbotron,
   .contactus-jumbotron,
+  .submit-jumbotron,
   .footer-jumbotron {
     height: 518px !important;
     margin-top: 0px;
@@ -483,7 +502,8 @@ a:hover {
   .serv-jumbotron,
   .podcast-jumbotron,
   .aboutus-jumbotron,
-  .contactus-jumbotron {
+  .contactus-jumbotron,
+  .submit-jumbotron {
     height: 518px !important;
     margin-top: 0px;
   }

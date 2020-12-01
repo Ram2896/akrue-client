@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { HelperService } from "src/app/service/helper.service";
 import * as AOS from "aos";
 import { ApiServService } from 'src/app/service/api-serv.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-wait-list",
@@ -15,7 +16,8 @@ export class WaitListComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private _helper: HelperService,
-    private _api : ApiServService
+    private _api : ApiServService,
+    private _router: Router,
   ) {}
 
   waitList : any ={};
@@ -59,6 +61,10 @@ export class WaitListComponent implements OnInit {
       data=> {
         console.log("success",data);
         this.onReset();
+        this._router.navigate([`success`]);
+      }, 
+      error =>{
+        console.log(error);
       }
     )
     // alert(

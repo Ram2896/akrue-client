@@ -30,18 +30,20 @@
         <!-- <th scope="col" class="mr-4">Referer Email</th>   -->
         <th scope="col" class="mr-4">User Email</th>
       </tr>
-      <tr scope="row" *ngFor="let list of wList;let i=index">
-        <td class="mr-4">{{i +1}}</td>
-        <!-- <td class="mr-4">{{list.firstName}}</td>  -->
-        <td class="mr-4">{{list.lastName}}</td>
-        <td class="mr-4">{{list.university}}</td>
-        <td class="mr-4">{{list.graduatingYear}}</td>
-        <td class="mr-4">{{list.sport}}</td>
-        <td class="mr-4">{{list.gender}}</td>
-        <!-- <td class="mr-4">{{list.instaUsername}}</td>   -->
-        <!-- <td class="mr-4">{{list.refererEmail}}</td>   -->
-        <td class="mr-4">{{list.userEmail}}</td>
-      </tr>
+      <!-- <ng-container *ngIf="subWlist"> -->
+        <tr scope="row" *ngFor="let list of wList;let i=index">
+          <td class="mr-4">{{i +1}}</td>
+          <!-- <td class="mr-4">{{list.firstName}}</td>  -->
+          <td class="mr-4">{{list.lastName}}</td>
+          <td class="mr-4">{{list.university}}</td>
+          <td class="mr-4">{{list.graduatingYear}}</td>
+          <td class="mr-4">{{list.sport}}</td>
+          <td class="mr-4">{{list.gender}}</td>
+          <!-- <td class="mr-4">{{list.instaUsername}}</td>   -->
+          <!-- <td class="mr-4">{{list.refererEmail}}</td>   -->
+          <td class="mr-4">{{list.userEmail}}</td>
+        </tr>
+      <!-- </ng-container> -->
     </table>
   </div>
 </div>

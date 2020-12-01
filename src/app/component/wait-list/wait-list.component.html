@@ -55,8 +55,8 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="form-group">
-            <select formControlName="sport"   class="form-control cj-bg-color  rounded-0" [ngClass]="{ 'is-invalid': submitted && f.sport.errors }">
+          <div class="form-group select-div" style="background: #f8f8f9;">
+            <select formControlName="sport"   class="form-control  cj-bg-color  rounded-0" [ngClass]="{ 'is-invalid': submitted && f.sport.errors }">
               <option value="" [selected]="true">Sport</option>
               <option value="cricket">Cricket</option>
               <option value="basket_ball">BasketBall</option>
@@ -72,14 +72,12 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="form-group">
-            <input
-              type="text"
-              formControlName="gender"
-              class="form-control cj-bg-color  rounded-0"
-              [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
-              placeholder="Gender"
-            />
+          <div class="form-group select-div" style="background: #f8f8f9;">
+            <select formControlName="gender"   class="form-control cj-bg-color  rounded-0" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }">
+              <option value="" [selected]="true">Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
           </div>
         </div>
       </div>
@@ -132,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="md-hide">
+      <div class="md-hide text-center">
         <button class="btn btn-primary btn-lg contact-btn w-25 wl-sum-btn">Submit</button>
       </div>
       <div class="md-hide-rev">

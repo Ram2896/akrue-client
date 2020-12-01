@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { environment } from "src/environments/environment.prod";
 
 @Injectable({
@@ -17,13 +18,11 @@ export class ApiServService {
 
   jwtToken = this.getAuhenticatedToken();
 
-
-
   getWaitList(userid: any) {
-    let headers = new HttpHeaders ({
-      Authorization : this.jwtToken
-    })
-    return this._http.get(`${this.apiUrl}/waitlists/${userid}`, {headers});
+    let headers = new HttpHeaders({
+      Authorization: this.jwtToken,
+    });
+    return this._http.get(`${this.apiUrl}/waitlists/${userid}`, { headers });
   }
 
   createWaitList(waitlist: any) {

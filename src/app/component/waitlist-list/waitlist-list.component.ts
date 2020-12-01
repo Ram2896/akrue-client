@@ -21,29 +21,37 @@ export class WaitlistListComponent implements OnInit {
 
   wList: any = [];
   userId: any;
+  subWlist : boolean = false;
   ngOnInit(): void {
     this.userId = this._activeRoute.snapshot.paramMap.get("userId");
+    console.log(this.userId, this.wList)
     this.getWaitlist(this.userId);
 
-    this.wList = [
-      {
-        firstName: "Ram",
-        lastName: "Chari",
-        university: "PMU",
-        graduatingYear: "2021",
-        sport: "Shuttle",
-        gender: "Male",
-        instaUserName: "@ram96",
-        refererEmail: "haris@gmail.com",
-        email: "ram96@gmail.com",
-      },
-    ];
+
+    // this.wList = [
+    //   {
+    //     firstName: "Ram",
+    //     lastName: "Chari",
+    //     university: "PMU",
+    //     graduatingYear: "2021",
+    //     sport: "Shuttle",
+    //     gender: "Male",
+    //     instaUserName: "@ram96",
+    //     refererEmail: "haris@gmail.com",
+    //     email: "ram96@gmail.com",
+    //   },
+    // ];
     this._helper.addComponentname("userlist");
   }
 
   getWaitlist(userid) {
     this._api.getWaitList(userid).subscribe((data) => {
       this.wList = data;
+      console.log(this.wList)
+      this.subWlist = true;
+    },
+    error=>{
+      this.subWlist = false;
     });
   }
   logout(){
