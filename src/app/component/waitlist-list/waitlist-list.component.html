@@ -1,52 +1,87 @@
-<div class="container-fluids">
-  <h1 class="text-center">Wait List</h1>
-  <div class="container my-4">
-    <button
-      class="btn btn-color active text-white mt-2 mx-4 ml-auto"
-      (click)="logout()"
-    >
-      Logout
-    </button>
-    <button
-      class="btn btn-color active text-white mt-2 mr-auto"
-      (click)="download()"
-    >
-      Download
-    </button>
-  </div>
+<div class="container">
+  <img
+    class="auth-logo mt-2"
+    src="../../../assets/images/Compressed/Akrue_logo.jpg"
+  />
+  <button
+    class="btn btn-color active text-white mt-2 mx-4 float-right btn-radius"
+    (click)="logout()"
+  >
+    Logout
+  </button>
 </div>
-<div class="container wllist-form-cont">
+<p class="text-center mb-0" style="font-size: 26px;">Wait List</p>
+<div class="container text-right">
+  <button
+    class="btn bg-white active text-black "
+    style="font-size: 15px;"
+    (click)="download()"
+  >
+    <img src="../../../assets/images/Compressed/download.svg" />
+    Download
+  </button>
+</div>
+<div class="w-100"></div>
+<div class="container-fluid wllist-form-cont">
   <div class="row">
     <table class="table table-bordered">
-      <tr class="bg-primary">
-        <th scope="col" class="mr-4">#</th>
-        <!-- <th scope="col" class="mr-4">First Name</th>  -->
-        <th scope="col" class="mr-4">LastName</th>
+      <tr class="bg-header">
+        <th scope="col" class="mr-4">Date</th>
+        <th scope="col" class="mr-4">Email</th>
+        <th scope="col" class="mr-4">First name</th> 
+        <th scope="col" class="mr-4">Last name</th>
+        <th scope="col" class="mr-4">Type of Sport</th>
+        <th scope="col" class="mr-4">Gender</th>
         <th scope="col" class="mr-4">University</th>
         <th scope="col" class="mr-4">Graduating Year</th>
-        <th scope="col" class="mr-4">Sports</th>
-        <th scope="col" class="mr-4">Gender</th>
-        <!-- <th scope="col" class="mr-4">Insta Name</th>   -->
-        <!-- <th scope="col" class="mr-4">Referer Email</th>   -->
-        <th scope="col" class="mr-4">User Email</th>
+        <th scope="col" class="mr-4">Referred Email</th>  
+        <th scope="col" class="mr-4">Instagram id</th>  
       </tr>
       <!-- <ng-container *ngIf="subWlist"> -->
-        <tr scope="row" *ngFor="let list of wList;let i=index">
-          <td class="mr-4">{{i +1}}</td>
-          <!-- <td class="mr-4">{{list.firstName}}</td>  -->
-          <td class="mr-4">{{list.lastName}}</td>
-          <td class="mr-4">{{list.university}}</td>
-          <td class="mr-4">{{list.graduatingYear}}</td>
-          <td class="mr-4">{{list.sport}}</td>
-          <td class="mr-4">{{list.gender}}</td>
-          <!-- <td class="mr-4">{{list.instaUsername}}</td>   -->
-          <!-- <td class="mr-4">{{list.refererEmail}}</td>   -->
-          <td class="mr-4">{{list.userEmail}}</td>
-        </tr>
+      <tr scope="row" *ngFor="let list of wList;let i=index">
+        <!-- <td class="mr-4">{{i +1}}</td> -->
+        <td class="mr-4">{{list.createdAt | date}}</td> 
+        <td class="mr-4">{{list.userEmail}}</td>
+        <td class="mr-4">{{list.firstName}}</td> 
+        <td class="mr-4">{{list.lastName}}</td>
+        <td class="mr-4">{{list.sport}}</td>
+        <td class="mr-4">{{list.gender}}</td>
+        <td class="mr-4">{{list.university}}</td>
+        <td class="mr-4">{{list.graduatingYear}}</td>
+        <td class="mr-4">{{list.refererEmail}}</td>  
+        <td class="mr-4">{{list.instaUsername}}</td>  
+      </tr>
       <!-- </ng-container> -->
     </table>
   </div>
 </div>
-<div class="w-100">
-  <app-footer></app-footer>
+<div class="container-fluid w-100 bg-black text-white fixed-bottom">
+  <div class="container py-3">
+    <div class="row fs-s">
+      <div class="col-md-6 copy-text text-lg-left text-sm-center">
+        <p>@AKRUE MEDIA. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 copy-text text-lg-right text-sm-center">
+        <div class="logos ml-auto text-white">
+          <a href="#" class="fa fa-youtube-play text-white"></a>
+          <a
+            href="https://twitter.com/akruemedia?s=11"
+            target="_blank"
+            class="fa fa-twitter text-white"
+          ></a>
+          <a href="#" class="fa fa-facebook text-white"></a>
+          <a
+            href="https://instagram.com/akruemedia?igshid=1tlxxw0j2okbd"
+            target="_blank"
+            class="fa fa-instagram text-white"
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/akrue-media"
+            target="_blank"
+            class="fa fa-linkedin text-white"
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

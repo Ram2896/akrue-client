@@ -28,19 +28,19 @@ export class WaitlistListComponent implements OnInit {
     this.getWaitlist(this.userId);
 
 
-    // this.wList = [
-    //   {
-    //     firstName: "Ram",
-    //     lastName: "Chari",
-    //     university: "PMU",
-    //     graduatingYear: "2021",
-    //     sport: "Shuttle",
-    //     gender: "Male",
-    //     instaUserName: "@ram96",
-    //     refererEmail: "haris@gmail.com",
-    //     email: "ram96@gmail.com",
-    //   },
-    // ];
+    this.wList = [
+      {
+        firstName: "Akrue",
+        lastName: "sports",
+        university: "OXFORD",
+        graduatingYear: "2021",
+        sport: "Shuttle",
+        gender: "Male",
+        instaUserName: "@akrue",
+        refererEmail: "akrue@gmail.com",
+        email: "akrueadmin@gmail.com",
+      },
+    ];
     this._helper.addComponentname("userlist");
   }
 
@@ -59,6 +59,6 @@ export class WaitlistListComponent implements OnInit {
     this._router.navigate(["/admin/login"])
   }
   download(){
-    this._jtocsv.downloadFile(this.wList, 'jsontocsv');
+    this._jtocsv.downloadFile(this.wList, 'Waitlist');
   }
 }

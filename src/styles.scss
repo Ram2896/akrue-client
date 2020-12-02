@@ -65,6 +65,9 @@ a {
   background: $button-color;
 }
 
+.btn-radius{
+  border-radius: 45px;
+}
 .btn.focus,
 .btn:focus {
   outline: 0;
@@ -291,6 +294,10 @@ a:hover {
     url(./assets/images/Compressed/Homepage_Footer.jpg);
   height: 700px !important;
   // padding-top: 80px;
+}
+
+.auth-logo{
+  height: 30px;
 }
 
 .main-menu {

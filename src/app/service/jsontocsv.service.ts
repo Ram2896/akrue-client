@@ -10,7 +10,7 @@ export class JsontocsvService {
     let csvData = this.ConvertToCSV(data, [
       "firstName",
       "lastName",
-      "University",
+      "university",
       "graduatingYear",
       "sport",
       "gender",
