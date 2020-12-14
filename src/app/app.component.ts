@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { DeviceDetectorSer } from 'src/app/service/device-detector.service';
 declare var $: any;
 import * as AOS from 'aos';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +12,8 @@ import * as AOS from 'aos';
 export class AppComponent {
   title = 'Arkue-Client';
   showLoader : boolean = true;
-  constructor(public _deviceDetectorService :DeviceDetectorSer ) {
+  constructor(public _deviceDetectorService :DeviceDetectorSer,
+    private _router :Router ) {
   }
   ngOnInit(){
     AOS.init({
@@ -21,6 +23,13 @@ export class AppComponent {
       easing: "ease-in-sine",
       delay: 300
     });
+
+    this._router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+          return;
+      }
+      window.scrollTo(0, 0)
+  });
     // AOS.init();
     setTimeout(() => {
       this.showLoader = false;

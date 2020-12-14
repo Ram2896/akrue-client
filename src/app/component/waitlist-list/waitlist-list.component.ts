@@ -3,7 +3,10 @@ import { HelperService } from "src/app/service/helper.service";
 import * as AOS from "aos";
 import { ApiServService } from "src/app/service/api-serv.service";
 import { ActivatedRoute, Router } from "@angular/router";
-import { JsontocsvService } from 'src/app/service/jsontocsv.service';
+import { JsontocsvService } from "src/app/service/jsontocsv.service";
+import { FormBuilder } from "@angular/forms";
+import { element } from 'protractor';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: "app-waitlist-list",
@@ -16,17 +19,20 @@ export class WaitlistListComponent implements OnInit {
     private _api: ApiServService,
     private _router: Router,
     private _activeRoute: ActivatedRoute,
-    private _jtocsv: JsontocsvService
+    private _jtocsv: JsontocsvService,
+    public fb: FormBuilder
   ) {}
 
   wList: any = [];
+  filteredwList: any = [];
   userId: any;
-  subWlist : boolean = false;
+  subWlist: boolean = false;
+  dateHide: boolean = false;
+
   ngOnInit(): void {
     this.userId = this._activeRoute.snapshot.paramMap.get("userId");
-    console.log(this.userId, this.wList)
+    console.log(this.userId, this.wList);
     this.getWaitlist(this.userId);
-
 
     this.wList = [
       {
@@ -44,21 +50,81 @@ export class WaitlistListComponent implements OnInit {
     this._helper.addComponentname("userlist");
   }
 
+  adminForm = this.fb.group({
+    type: ["All"],
+    from: [new Date()],
+    to: [new Date()],
+  });
+
+  onSubmit() {
+    // alert(JSON.stringify(this.adminForm.value));
+  }
+
+  hidedate() {
+    let from = new Date(this.adminForm.value.from);
+    let to = new Date(this.adminForm.value.to);
+    this.filteredwList = this.wList;
+    if (this.adminForm.value.type === "select") {
+      this.dateHide = true;
+      // if (from != new Date()  && to instanceof Date) {
+        // this.filterWlist();
+      // }
+    } else {
+      this.dateHide = false;
+      this.filteredwList = this.wList;
+    }
+  }
+
+  // reset(){
+  //   this.adminForm.reset();
+  //   this.adminForm.value.type ="All"
+  // }
   getWaitlist(userid) {
-    this._api.getWaitList(userid).subscribe((data) => {
-      this.wList = data;
-      console.log(this.wList)
-      this.subWlist = true;
-    },
-    error=>{
-      this.subWlist = false;
-    });
+    this._api.getWaitList(userid).subscribe(
+      (data) => {
+        this.wList = data;
+
+        this.filteredwList = this.wList;
+        console.log(this.wList);
+        this.subWlist = true;
+      },
+      (error) => {
+        this.subWlist = false;
+      }
+    );
   }
-  logout(){
+
+  filterWlist() {
+    let from = new Date(this.adminForm.value.from);
+    let to = new Date(this.adminForm.value.to);
+
+    if (this.adminForm.value.type != "All") {
+      this.filteredwList = [];
+      this.filteredwList = this.wList.filter((element) => {
+        let created = new Date(element.createdAt);
+        // console.log("from", from);
+        // console.log("To", to);
+        // console.log("Created", created);
+        console.log(created >= from && created <= to);
+        if (created >= from && created <= to) {
+          return element;
+        }
+      });
+      // console.log("fWlist", this.filteredwList);
+    }
+  }
+
+  logout() {
     this._api.logout();
-    this._router.navigate(["/admin/login"])
+    this._router.navigate(["/admin/login"]);
   }
-  download(){
-    this._jtocsv.downloadFile(this.wList, 'Waitlist');
+  download() {
+    this.filteredwList = this.filteredwList.filter((element)=>{
+      element.createdAt = formatDate(element.createdAt, 'yyyy/MM/dd', 'en');
+      return element;
+      // element.createdAt = element.createdAt()
+    })
+    // console.log(this.filteredwList);
+    this._jtocsv.downloadFile(this.filteredwList, "Waitlist");
   }
 }

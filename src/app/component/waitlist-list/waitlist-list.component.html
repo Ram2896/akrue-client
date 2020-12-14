@@ -1,8 +1,5 @@
 <div class="container">
-  <img
-    class="auth-logo mt-2"
-    src="../../../assets/images/Compressed/Akrue_logo.jpg"
-  />
+  <img class="auth-logo mt-2" src="./assets/images/Compressed/Akrue_logo.jpg" />
   <button
     class="btn btn-color active text-white mt-2 mx-4 float-right btn-radius"
     (click)="logout()"
@@ -10,16 +7,37 @@
     Logout
   </button>
 </div>
-<p class="text-center mb-0" style="font-size: 26px;">Wait List</p>
+<p class="text-center mb-0" style="font-size: 26px;">Join the WaitList</p>
 <div class="container text-right">
-  <button
-    class="btn bg-white active text-black "
-    style="font-size: 15px;"
-    (click)="download()"
-  >
-    <img src="../../../assets/images/Compressed/download.svg" />
-    Download
-  </button>
+  <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+    <select
+      formControlName="type"
+      class="mr-2 select-type"
+      (change)="hidedate()"
+    >
+      <option value="All" [selected]="true">All</option>
+      <option value="select">Select Date</option>
+    </select>
+    <span *ngIf="dateHide" class="date-span">
+      <input formControlName="from" class="from" id="from" type="date" />
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      <input
+        (change)="filterWlist()"
+        formControlName="to"
+        class="to"
+        id="to"
+        type="date"
+      />
+    </span>
+    <button
+      class="btn bg-white active text-black"
+      style="font-size: 15px;"
+      (click)="download()"
+    >
+      <img src="./assets/images/Compressed/download.svg" />
+      Download
+    </button>
+  </form>
 </div>
 <div class="w-100"></div>
 <div class="container-fluid wllist-form-cont">
@@ -28,28 +46,28 @@
       <tr class="bg-header">
         <th scope="col" class="mr-4">Date</th>
         <th scope="col" class="mr-4">Email</th>
-        <th scope="col" class="mr-4">First name</th> 
+        <th scope="col" class="mr-4">First name</th>
         <th scope="col" class="mr-4">Last name</th>
         <th scope="col" class="mr-4">Type of Sport</th>
         <th scope="col" class="mr-4">Gender</th>
         <th scope="col" class="mr-4">University</th>
         <th scope="col" class="mr-4">Graduating Year</th>
-        <th scope="col" class="mr-4">Referred Email</th>  
-        <th scope="col" class="mr-4">Instagram id</th>  
+        <th scope="col" class="mr-4">Referred Email</th>
+        <th scope="col" class="mr-4">Instagram id</th>
       </tr>
       <!-- <ng-container *ngIf="subWlist"> -->
-      <tr scope="row" *ngFor="let list of wList;let i=index">
+      <tr scope="row" *ngFor="let list of filteredwList;let i=index">
         <!-- <td class="mr-4">{{i +1}}</td> -->
-        <td class="mr-4">{{list.createdAt | date}}</td> 
+        <td class="mr-4">{{list.createdAt | date}}</td>
         <td class="mr-4">{{list.userEmail}}</td>
-        <td class="mr-4">{{list.firstName}}</td> 
+        <td class="mr-4">{{list.firstName}}</td>
         <td class="mr-4">{{list.lastName}}</td>
         <td class="mr-4">{{list.sport}}</td>
         <td class="mr-4">{{list.gender}}</td>
         <td class="mr-4">{{list.university}}</td>
         <td class="mr-4">{{list.graduatingYear}}</td>
-        <td class="mr-4">{{list.refererEmail}}</td>  
-        <td class="mr-4">{{list.instaUsername}}</td>  
+        <td class="mr-4">{{list.refererEmail}}</td>
+        <td class="mr-4">{{list.instaUsername}}</td>
       </tr>
       <!-- </ng-container> -->
     </table>

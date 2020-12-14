@@ -8,3 +8,25 @@
 tr td {
     text-align: center;
 }
+
+select:focus,input[type=date]{
+    outline: 0!important;
+}
+
+.select-type ,.from ,.to{
+    border: 0px !important;
+}
+
+.date-span{
+    outline: 2px solid black;
+}
+
+
+.fa {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0px;}

@@ -8,6 +8,7 @@ export class JsontocsvService {
 
   downloadFile(data, filename = "waitlist") {
     let csvData = this.ConvertToCSV(data, [
+      "createdAt",
       "firstName",
       "lastName",
       "university",
