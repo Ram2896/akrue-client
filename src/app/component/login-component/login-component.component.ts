@@ -54,7 +54,10 @@ export class LoginComponentComponent implements OnInit {
       data=>{
         sessionStorage.setItem("TOKEN", `Bearer ${data.token}`);
         sessionStorage.setItem("USER", JSON.stringify(data.user));
-        this._router.navigate([]).then(result => {  window.open(`/admin/waitlist/${data.user._id}`, '_self'); });
+        this._router.navigate([]).then(result => {  window.open(`/#/admin/waitlist/${data.user._id}`, '_self');
+        location.reload();
+      });
+        // debugger;
         // console.log(data);
         this.invalidLogin = false;
       }, error=>{

@@ -17,6 +17,7 @@ import { WaitListComponent } from './component/wait-list/wait-list.component';
 import { LoginComponentComponent } from './component/login-component/login-component.component';
 import { WaitlistListComponent } from './component/waitlist-list/waitlist-list.component';
 import { SubmitComponent } from './component/submit/submit.component';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { SubmitComponent } from './component/submit/submit.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy , useClass: HashLocationStrategy},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

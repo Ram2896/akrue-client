@@ -1,3 +1,4 @@
+<div *ngIf="!subWlist">loading...</div>
 <div class="container">
   <img class="auth-logo mt-2" src="./assets/images/Compressed/Akrue_logo.jpg" />
   <button
@@ -40,37 +41,36 @@
   </form>
 </div>
 <div class="w-100"></div>
+
 <div class="container-fluid wllist-form-cont">
   <div class="row">
-    <table class="table table-bordered">
-      <tr class="bg-header">
-        <th scope="col" class="mr-4">Date</th>
-        <th scope="col" class="mr-4">Email</th>
-        <th scope="col" class="mr-4">First name</th>
-        <th scope="col" class="mr-4">Last name</th>
-        <th scope="col" class="mr-4">Type of Sport</th>
-        <th scope="col" class="mr-4">Gender</th>
-        <th scope="col" class="mr-4">University</th>
-        <th scope="col" class="mr-4">Graduating Year</th>
-        <th scope="col" class="mr-4">Referred Email</th>
-        <th scope="col" class="mr-4">Instagram id</th>
-      </tr>
-      <!-- <ng-container *ngIf="subWlist"> -->
-      <tr scope="row" *ngFor="let list of filteredwList;let i=index">
-        <!-- <td class="mr-4">{{i +1}}</td> -->
-        <td class="mr-4">{{list.createdAt | date}}</td>
-        <td class="mr-4">{{list.userEmail}}</td>
-        <td class="mr-4">{{list.firstName}}</td>
-        <td class="mr-4">{{list.lastName}}</td>
-        <td class="mr-4">{{list.sport}}</td>
-        <td class="mr-4">{{list.gender}}</td>
-        <td class="mr-4">{{list.university}}</td>
-        <td class="mr-4">{{list.graduatingYear}}</td>
-        <td class="mr-4">{{list.refererEmail}}</td>
-        <td class="mr-4">{{list.instaUsername}}</td>
-      </tr>
-      <!-- </ng-container> -->
-    </table>
+      <table class="table table-bordered">
+        <tr class="bg-header">
+          <th scope="col" class="mr-4">Date</th>
+          <th scope="col" class="mr-4">Email</th>
+          <th scope="col" class="mr-4">First name</th>
+          <th scope="col" class="mr-4">Last name</th>
+          <th scope="col" class="mr-4">Type of Sport</th>
+          <th scope="col" class="mr-4">Gender</th>
+          <th scope="col" class="mr-4">University</th>
+          <th scope="col" class="mr-4">Graduating Year</th>
+          <th scope="col" class="mr-4">Referred Email</th>
+          <th scope="col" class="mr-4">Instagram id</th>
+        </tr>
+        <tr scope="row" *ngFor="let list of wList">
+          <!-- <td class="mr-4">{{i +1}}</td> -->
+          <td class="mr-4">{{list.createdAt | date}}</td>
+          <td class="mr-4">{{list.userEmail}}</td>
+          <td class="mr-4">{{list.firstName}}</td>
+          <td class="mr-4">{{list.lastName}}</td>
+          <td class="mr-4">{{list.sport}}</td>
+          <td class="mr-4">{{list.gender}}</td>
+          <td class="mr-4">{{list.university}}</td>
+          <td class="mr-4">{{list.graduatingYear}}</td>
+          <td class="mr-4">{{list.refererEmail}}</td>
+          <td class="mr-4">{{list.instaUsername}}</td>
+        </tr>
+      </table>
   </div>
 </div>
 <div class="container-fluid w-100 bg-black text-white fixed-bottom">

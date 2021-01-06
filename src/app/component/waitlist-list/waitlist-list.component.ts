@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { HelperService } from "src/app/service/helper.service";
 import * as AOS from "aos";
 import { ApiServService } from "src/app/service/api-serv.service";
@@ -14,14 +14,6 @@ import { formatDate } from '@angular/common';
   styleUrls: ["./waitlist-list.component.scss"],
 })
 export class WaitlistListComponent implements OnInit {
-  constructor(
-    private _helper: HelperService,
-    private _api: ApiServService,
-    private _router: Router,
-    private _activeRoute: ActivatedRoute,
-    private _jtocsv: JsontocsvService,
-    public fb: FormBuilder
-  ) {}
 
   wList: any = [];
   filteredwList: any = [];
@@ -29,11 +21,26 @@ export class WaitlistListComponent implements OnInit {
   subWlist: boolean = false;
   dateHide: boolean = false;
 
+  constructor(
+    private _helper: HelperService,
+    private _api: ApiServService,
+    private _router: Router,
+    private _activeRoute: ActivatedRoute,
+    private _jtocsv: JsontocsvService,
+    public fb: FormBuilder
+  ) {
+    this.wList = [];
+    this.filteredwList= [];
+  }
+
   ngOnInit(): void {
+    this._activeRoute.data.subscribe((data) => console.log(data));
     this.userId = this._activeRoute.snapshot.paramMap.get("userId");
-    console.log(this.userId, this.wList);
     this.getWaitlist(this.userId);
 
+    setTimeout(() => {
+      this.getWaitlist(this.userId);
+    }, 2000);
     this.wList = [
       {
         firstName: "Akrue",
@@ -80,19 +87,23 @@ export class WaitlistListComponent implements OnInit {
   //   this.adminForm.value.type ="All"
   // }
   getWaitlist(userid) {
+    this.subWlist = true;
     this._api.getWaitList(userid).subscribe(
       (data) => {
+        console.log("inside",data);
         this.wList = data;
 
         this.filteredwList = this.wList;
-        console.log(this.wList);
         this.subWlist = true;
+        // debugger;
       },
       (error) => {
         this.subWlist = false;
       }
     );
+    console.log(this.filteredwList);
   }
+
 
   filterWlist() {
     let from = new Date(this.adminForm.value.from);
