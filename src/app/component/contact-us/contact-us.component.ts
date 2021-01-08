@@ -20,7 +20,7 @@ export class ContactUsComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private _helper: HelperService
   ) {}
-
+  subBtnText :string = "Submit";
   ngOnInit(): void {
     // AOS.init({
     //   once: true,
@@ -42,17 +42,20 @@ export class ContactUsComponent implements OnInit {
   get c() {
     return this.contactForm.controls;
   }
-  onSubmit() {
-    this.submitted = true;
 
+  onSubmit() {
     // stop here if form is invalid
+    this.submitted = true;
     if (this.contactForm.invalid) {
       return;
     }
+    this.subBtnText ="Loading..."
+
+    
 
     // display form values on success
-    alert(
-      "SUCCESS!! :-)\n\n" + JSON.stringify(this.contactForm.value, null, 4)
-    );
+    // alert(
+    //   "SUCCESS!! :-)\n\n" + JSON.stringify(this.contactForm.value, null, 4)
+    // );
   }
 }

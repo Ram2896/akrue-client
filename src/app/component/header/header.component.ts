@@ -10,7 +10,7 @@ declare var $: any;
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-  menuItems: any = ["HOME", "SERVICE", "PODCAST", "ABOUT US"];
+  menuItems: any = ["home", "service", "podcast", "about us"];
   selectedItem: string = "";
   constructor(
     public _deviceDetectorService: DeviceDetectorSer,

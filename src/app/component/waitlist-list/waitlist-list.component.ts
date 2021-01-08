@@ -107,15 +107,16 @@ export class WaitlistListComponent implements OnInit {
 
   filterWlist() {
     let from = new Date(this.adminForm.value.from);
+    from.setHours(0);
     let to = new Date(this.adminForm.value.to);
-
+to.setHours(24);
     if (this.adminForm.value.type != "All") {
       this.filteredwList = [];
       this.filteredwList = this.wList.filter((element) => {
         let created = new Date(element.createdAt);
-        // console.log("from", from);
-        // console.log("To", to);
-        // console.log("Created", created);
+        console.log("from", from);
+        console.log("To", to);
+        console.log("Created", created);
         console.log(created >= from && created <= to);
         if (created >= from && created <= to) {
           return element;

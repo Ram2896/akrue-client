@@ -9,7 +9,7 @@ import * as AOS from "aos";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  menuItems: any = ["HOME", "SERVICE", "PODCAST", "ABOUT US"];
+  // menuItems: any = ["HOME", "SERVICE", "PODCAST", "ABOUT US"];
   selectedItem: string = "HOME";
   constructor(
     public _deviceDetectorService: DeviceDetectorSer,

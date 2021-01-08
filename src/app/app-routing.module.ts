@@ -13,16 +13,16 @@ import { RouteGuardService } from './service/route-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'HOME', component: HomeComponent },
-  { path: 'SERVICE', component: ServiceComponent },
-  { path: 'PODCAST', component: PodcastComponent },
-  { path: 'ABOUT US', component: AboutUsComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'podcast', component: PodcastComponent },
+  { path: 'about us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'wait-list', component: WaitListComponent },
   { path: 'success', component: SubmitComponent },
   { path: 'admin/login', component: LoginComponentComponent },
   { path: 'admin/waitlist/:userId', component: WaitlistListComponent ,canActivate: [RouteGuardService]},
-  { path: '**', redirectTo: 'HOME'}
+  { path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({

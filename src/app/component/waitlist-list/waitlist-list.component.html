@@ -8,8 +8,10 @@
     Logout
   </button>
 </div>
-<p class="text-center mb-0" style="font-size: 26px;">Join the WaitList</p>
-<div class="container text-right">
+<div class="container">
+  <p class="text-center mb-0" style="font-size: 26px;">Join the WaitList</p>
+</div>
+<div class="container text-right mb-3">
   <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
     <select
       formControlName="type"
@@ -20,10 +22,9 @@
       <option value="select">Select Date</option>
     </select>
     <span *ngIf="dateHide" class="date-span">
-      <input formControlName="from" class="from" id="from" type="date" />
+      <input (change)="filterWlist()" formControlName="from" class="from" id="from" type="date" />
       <i class="fa fa-arrow-right" aria-hidden="true"></i>
-      <input
-        (change)="filterWlist()"
+      <input (change)="filterWlist()"
         formControlName="to"
         class="to"
         id="to"
@@ -57,7 +58,7 @@
           <th scope="col" class="mr-4">Referred Email</th>
           <th scope="col" class="mr-4">Instagram id</th>
         </tr>
-        <tr scope="row" *ngFor="let list of wList">
+        <tr scope="row" *ngFor="let list of filteredwList">
           <!-- <td class="mr-4">{{i +1}}</td> -->
           <td class="mr-4">{{list.createdAt | date}}</td>
           <td class="mr-4">{{list.userEmail}}</td>
@@ -77,7 +78,7 @@
   <div class="container py-3">
     <div class="row fs-s">
       <div class="col-md-6 copy-text text-lg-left text-sm-center">
-        <p>@AKRUE MEDIA. All rights reserved.</p>
+        <p>&#169;AKRUE MEDIA. All rights reserved.</p>
       </div>
       <div class="col-md-6 copy-text text-lg-right text-sm-center">
         <div class="logos ml-auto text-white">

@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class WaitListComponent implements OnInit {
   waitListForm: FormGroup;
   submitted = false;
+  wlsbText = "Submit";
   constructor(
     private _formBuilder: FormBuilder,
     private _helper: HelperService,
@@ -48,11 +49,11 @@ export class WaitListComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
     // stop here if form is invalid
     if (this.waitListForm.invalid) {
       return;
     }
+    this.wlsbText = "Loading..."
 
     this.waitList= this.waitListForm.value;
     // display form values on success
@@ -62,6 +63,7 @@ export class WaitListComponent implements OnInit {
         console.log("success",data);
         this.onReset();
         this._router.navigate([`success`]);
+
       }, 
       error =>{
         console.log(error);
