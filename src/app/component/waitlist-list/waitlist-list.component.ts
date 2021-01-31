@@ -34,7 +34,7 @@ export class WaitlistListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._activeRoute.data.subscribe((data) => console.log(data));
+    this._activeRoute.data.subscribe((data) => console.log(""));
     this.userId = this._activeRoute.snapshot.paramMap.get("userId");
     this.getWaitlist(this.userId);
 
@@ -90,7 +90,7 @@ export class WaitlistListComponent implements OnInit {
     this.subWlist = true;
     this._api.getWaitList(userid).subscribe(
       (data) => {
-        console.log("inside",data);
+        // console.log("inside",data);
         this.wList = data;
 
         this.filteredwList = this.wList;
@@ -101,7 +101,7 @@ export class WaitlistListComponent implements OnInit {
         this.subWlist = false;
       }
     );
-    console.log(this.filteredwList);
+    // console.log(this.filteredwList);
   }
 
 
@@ -114,10 +114,10 @@ to.setHours(24);
       this.filteredwList = [];
       this.filteredwList = this.wList.filter((element) => {
         let created = new Date(element.createdAt);
-        console.log("from", from);
-        console.log("To", to);
-        console.log("Created", created);
-        console.log(created >= from && created <= to);
+        // console.log("from", from);
+        // console.log("To", to);
+        // console.log("Created", created);
+        // console.log(created >= from && created <= to);
         if (created >= from && created <= to) {
           return element;
         }

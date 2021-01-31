@@ -18,6 +18,9 @@ export class ApiServService {
 
   jwtToken = this.getAuhenticatedToken();
 
+  welcome(){
+    return this._http.get(`${this.apiUrl}/welcome`);
+  }
   getWaitList(userid: any) {
     let headers = new HttpHeaders({
       Authorization: this.jwtToken,
@@ -40,6 +43,10 @@ export class ApiServService {
     if (this.getAuhenticatedUser) {
       return sessionStorage.getItem("TOKEN");
     }
+  }
+
+  contactUsMail(input: any): Observable<any> {
+    return this._http.post(`${this.apiUrl}/contactus`, input);
   }
 
   isUserLoggedIn() {

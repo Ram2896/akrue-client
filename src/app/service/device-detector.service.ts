@@ -17,7 +17,7 @@ export class DeviceDetectorSer {
  
 
   epicFunction() {
-    console.log('hello `Home` component');
+    // console.log('hello `Home` component');
     this.isMobile = this.deviceService.isMobile();
     this.isTablet = this.deviceService.isTablet();
     this.isDesktopDevice = this.deviceService.isDesktop();

@@ -10,7 +10,7 @@ declare var $: any;
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-  menuItems: any = ["home", "service", "podcast", "about us"];
+  menuItems: any = ["home", "our sponsor", "podcast overview", "meet the girls"];
   selectedItem: string = "";
   constructor(
     public _deviceDetectorService: DeviceDetectorSer,
@@ -33,15 +33,15 @@ export class HeaderComponent implements OnInit {
   }
 
   listClick(event, newValue) {
-    console.log(newValue);
+    // console.log(newValue);
 
     this.selectedItem = newValue; 
   }
   
   closeMenu() {
-    console.log("befo",this.selectedItem);
+    // console.log("befo",this.selectedItem);
     this.selectedItem = ""; 
-    console.log("after",this.selectedItem);
+    // console.log("after",this.selectedItem);
 
     $('.navbar-collapse').removeClass('show');   
     $('.navbar-collapse').addClass('hide');   

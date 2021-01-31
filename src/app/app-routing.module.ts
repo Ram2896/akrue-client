@@ -14,9 +14,9 @@ import { RouteGuardService } from './service/route-guard.service';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'service', component: ServiceComponent },
-  { path: 'podcast', component: PodcastComponent },
-  { path: 'about us', component: AboutUsComponent },
+  { path: 'our sponsor', component: ServiceComponent },
+  { path: 'podcast overview', component: PodcastComponent },
+  { path: 'meet the girls', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'wait-list', component: WaitListComponent },
   { path: 'success', component: SubmitComponent },

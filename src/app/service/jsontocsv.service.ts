@@ -19,7 +19,7 @@ export class JsontocsvService {
       "refererEmail",
       "userEmail"
     ]);
-    console.log(csvData);
+    // console.log(csvData);
     let blob = new Blob(["\ufeff" + csvData], {
       type: "text/csv;charset=utf-8;",
     });

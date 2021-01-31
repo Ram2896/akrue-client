@@ -61,7 +61,7 @@ export class LoginComponentComponent implements OnInit {
         // console.log(data);
         this.invalidLogin = false;
       }, error=>{
-        console.log(error);
+        // console.log(error);
         this.invalidLogin = true;
       }
     )

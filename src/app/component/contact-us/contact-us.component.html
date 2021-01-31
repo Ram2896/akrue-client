@@ -3,7 +3,7 @@
     class="jumbotron jumbotron-fluid text-white bg-sticky contactus-jumbotron"
   >
     <div class="container con-width" data-aos="fade-up">
-      <h1 class="display-4">Contact Us</h1>
+      <h1 class="display-4">Let's Chat</h1>
       <p class="lead">Reach out with any questions or inquiries</p>
     </div>
   </div>
@@ -26,31 +26,31 @@
         </p>
         <p class="cn-fs-500-23 mb-0">
           Then follow us on:<span>
-            <a href="#" class="fa fa-youtube-play"></a>
+            <a href="https://www.youtube.com/channel/UCk4-4lovzoi74cME5THwnsg?guided_help_flow=5" class="fa fa-youtube-play"></a>
             <a
-              href="https://twitter.com/akruemedia?s=11"
+              href="https://twitter.com/ashandelpodcast"
               target="_blank"
               class="fa fa-twitter"
             ></a>
-            <a href="#" class="fa fa-facebook"></a>
+            <a href="https://www.facebook.com/Ash-El-Podcast-100765011990200/?view_public_for=100765011990200" class="fa fa-facebook"></a>
             <a
-              href="https://instagram.com/akruemedia?igshid=1tlxxw0j2okbd"
+              href="https://www.instagram.com/ash.and.el/"
               target="_blank"
               class="fa fa-instagram"
             ></a>
-            <a
+            <!-- <a
               href="https://www.linkedin.com/company/akrue-media"
               target="_blank"
               class="fa fa-linkedin"
-            ></a
-          ></span>
+            ></a > -->
+        </span>
         </p>
       </div>
     </div>
     <div class="row">
       
       <div class="col-md-6 offset-md-3" data-aos="fade-up">
-        <div class="alert alert-success" *ngIf="submitted">
+        <div class="alert alert-success" *ngIf="subBtnText==='Sent'">
           <strong>Success!</strong> .
         </div>
       </div>
@@ -66,10 +66,10 @@
                   type="text"
                   style="height: 50px;"
                   class="form-control cj-bg-color"
-                  name="Fullname"
+                  name="name"
                   placeholder="Name"
-                  formControlName="Fullname"
-                  [ngClass]="{ 'is-invalid': submitted && c.Fullname.errors }"
+                  formControlName="name"
+                  [ngClass]="{ 'is-invalid': submitted && c.name.errors }"
                 />
               </div>
             </div>
@@ -79,11 +79,11 @@
                   type="email"
                   style="height: 50px;"
                   class="form-control cj-bg-color"
-                  name="Email"
+                  name="email"
                   aria-describedby="emailHelp"
                   placeholder="Email"
-                  formControlName="Email"
-                  [ngClass]="{ 'is-invalid': submitted && c.Email.errors }"
+                  formControlName="email"
+                  [ngClass]="{ 'is-invalid': submitted && c.email.errors }"
                 />
               </div>
             </div>
@@ -93,11 +93,11 @@
               <div class="form-group">
                 <textarea
                   class="form-control cj-bg-color"
-                  formControlName="Comment"
-                  name="Comment"
+                  formControlName="message"
+                  name="message"
                   placeholder="Message"
                   style="height: 304px;"
-                  [ngClass]="{ 'is-invalid': submitted && c.Comment.errors }"
+                  [ngClass]="{ 'is-invalid': submitted && c.message.errors }"
                 >
                 </textarea>
               </div>

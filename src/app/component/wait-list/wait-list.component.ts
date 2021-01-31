@@ -23,6 +23,7 @@ export class WaitListComponent implements OnInit {
 
   waitList : any ={};
   ngOnInit(): void {
+    this.welcome();
     this.waitListForm = this._formBuilder.group(
       {
         firstName: ["", Validators.required],
@@ -57,16 +58,16 @@ export class WaitListComponent implements OnInit {
 
     this.waitList= this.waitListForm.value;
     // display form values on success
-    console.log(this.waitList);
+    // console.log(this.waitList);
     this._api.createWaitList(this.waitList).subscribe(
       data=> {
-        console.log("success",data);
+        // console.log("success",data);
         this.onReset();
         this._router.navigate([`success`]);
 
       }, 
       error =>{
-        console.log(error);
+        // console.log(error);
       }
     )
     // alert(
@@ -77,5 +78,10 @@ export class WaitListComponent implements OnInit {
   onReset() {
     this.submitted = false;
     this.waitListForm.reset();
+  }
+  welcome(){
+    this._api.welcome().subscribe(data=>{
+      console.log(data);
+    })
   }
 }

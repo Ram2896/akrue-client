@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { DeviceDetectorSer } from "src/app/service/device-detector.service";
 import { HelperService } from "src/app/service/helper.service";
 import * as AOS from "aos";
+import { ApiServService } from "src/app/service/api-serv.service";
 
 @Component({
   selector: "app-home",
@@ -13,24 +14,24 @@ export class HomeComponent implements OnInit {
   selectedItem: string = "HOME";
   constructor(
     public _deviceDetectorService: DeviceDetectorSer,
-    private _helper: HelperService
+    private _helper: HelperService,
+    private _api : ApiServService,
   ) {}
 
   ngOnInit(): void {
-    // AOS.init({
-    //   once: true,
-    //   offset: 200,
-    //   duration: 400,
-    //   easing: "ease-in-sine",
-    //   delay: 300
-    // });
-    console.log(this._deviceDetectorService.isMobile);
+    this.welcome();
     this._helper.addComponentname("home");
   }
 
   listClick(event, newValue) {
-    console.log(newValue);
+    // console.log(newValue);
     this.selectedItem = newValue; // don't forget to update the model here
     // ... do other stuff here ...
+  }
+
+  welcome(){
+    this._api.welcome().subscribe(data=>{
+      console.log(data);
+    })
   }
 }
